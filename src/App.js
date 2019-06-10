@@ -1,13 +1,17 @@
-import React from 'react';
-import Hero from './components/hero/hero';
-import './App.scss';
+import React from "react";
+import Header from "./components/header/header";
+import Hero from "./components/hero/hero";
+import AboutBand from "./components/about_the_band/AboutBand";
+import "./App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <Hero/>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div className="App">
+            <Header />
+            <Hero />
+            <AboutBand />
+        </div>
+    );
+};
 
 export default App;

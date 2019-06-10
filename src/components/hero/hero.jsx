@@ -13,7 +13,7 @@ class Hero extends Component {
               <Logo />
             </div>
             <h1>Father & Son Band</h1>
-            <p>Playing in G# since 1900</p>
+            {/*<p>Playing in G# since 1900</p>*/}
           </div>
         </div>
     )
