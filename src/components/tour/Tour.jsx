@@ -26,7 +26,7 @@ const Tour = ({tourSlide}) => {
 
             return (
                 <p key={i}>
-                    <span>{date}</span> <span>{e.location}</span>
+                    <span>{e.location}</span> <span>{date}</span>
                 </p>
             );
         });

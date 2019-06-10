@@ -1,14 +1,13 @@
 //@import "../../../../node_modules/swiper/dist/css/swiper.css";
-.thumbs-wrapper {
-    margin:0 auto;
-}
 
+.thumbs-wrapper {
+    margin: 0 auto;
+}
 
 .b-gallery {
     padding: 40px $spacing-regular;
     margin: 0 auto;
-
-     background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
+    background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
     //background-image: url("../images/texture.jpg");
     @media screen and (min-width:800px) {
         padding: 60px $spacing-regular;
