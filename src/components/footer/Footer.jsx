@@ -3,8 +3,8 @@ import { ReactComponent as Facebook } from '../../assets/facebook.svg';
 
 import { ReactComponent as Instagram } from '../../assets/instagram.svg';
 
-const Footer = () => {
-    return( <footer className="b-footer" id="contact">
+const Footer = ({footer}) => {
+    return( <footer ref={footer} className="b-footer" id="contact">
     <div className="b-footer__wrapper">
       <div className="b-footer__info">
         <h4>Father & <br/>son band</h4>

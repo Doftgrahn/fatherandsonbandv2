@@ -6,7 +6,7 @@ class Hero extends Component {
 
   render () {
     return (
-      <div className="b-hero" id="home">
+      <div ref={this.props.hero} className="b-hero" id="home">
         <img src={Image} alt="Father and son" className="b-hero__image"/>
           <div className="b-hero__content">
             <div className="wrapper">

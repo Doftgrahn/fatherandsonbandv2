@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 
 import {database} from "../../general/firestoreconfig";
 
-const Tour = () => {
+const Tour = ({tourSlide}) => {
     const [tour, setTour] = useState([]);
 
     useEffect(() => {
@@ -29,7 +29,7 @@ const Tour = () => {
     console.log(tour);
 
     return (
-        <section className="b-tour" id="tour">
+        <section ref={tourSlide} className="b-tour" id="tour">
             <div className="b-tour__wrapper">
                 <h2>Summer Tour 2019</h2>
                 <div className="b-tour__container">

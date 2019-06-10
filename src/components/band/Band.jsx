@@ -6,7 +6,7 @@ import ViktorImg from "../../assets/images/lenberg.jpg";
 import SimonPic from "../../assets/images/simon.jpg";
 import MickelPic from "../../assets/images/Mickel.jpg";
 
-const Band = () => {
+const Band = ({bandMembers}) => {
     const [band] = useState([
         {
             picture: JimmyImg,
@@ -59,13 +59,12 @@ const Band = () => {
         </div>
     ));
 
-    return ( <section className="b-band" id="members">
-    <h2 className="">Members</h2>
-    <div className="b-band__container">
-    {renderBand}
-    </div>
-    </section>
-);
+    return (
+        <section ref={bandMembers} className="b-band" id="members">
+            <h2 className="">Members</h2>
+            <div className="b-band__container">{renderBand}</div>
+        </section>
+    );
 };
 
 export default Band;

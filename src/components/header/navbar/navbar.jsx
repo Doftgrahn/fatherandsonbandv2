@@ -1,21 +1,102 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 
 class Navbar extends Component {
+    slideToAbout = () => {
+        this.props.toggleOff();
+        this.props.slidetoAboutBand();
+    };
+    slideToHome = () => {
+        this.props.toggleOff();
+        this.props.slideToHome();
+    };
+    slideToMembers = () => {
+        this.props.toggleOff();
+        this.props.slideToMembers();
+    };
+    slideToHistory = () => {
+        this.props.toggleOff();
+        this.props.slideToHistory();
+    };
+    slideToTour = () => {
+        this.props.toggleOff();
+        this.props.slideToTour();
+    };
+    slideToGallery = () => {
+        this.props.toggleOff();
+        this.props.slideToGallery();
+    };
+    slideToFooter = () => {
+        this.props.toggleOff();
+        this.props.slideToFooter();
+    };
+
     render() {
         let {toggle, toggleOff} = this.props;
+
         return (
-            <div className={"b-header__container " + (toggle ? 'b-header__container--active' : '')}>
-      <ul className="b-header__container-meny">
-        <li><a className="b-header__container-meny-links" data-scroll="home" href="index.html" onClick={ () => toggleOff() }> Home</a></li>
-        <li><a className="b-header__container-meny-links" data-scroll="about" href="home.html" onClick={ () => toggleOff() } >About</a></li>
-        <li><a className="b-header__container-meny-links" data-scroll="members" href="home.html" onClick={ () => toggleOff() }>Members</a></li>
-        <li><a className="b-header__container-meny-links" data-scroll="history" href="home.html" onClick={ () => toggleOff() }>History</a></li>
-        <li><a className="b-header__container-meny-links" data-scroll="tour" href="home.html" onClick={ () => toggleOff() }>Tour</a></li>
-        <li><a className="b-header__container-meny-links" data-scroll="gallery" href="home.html" onClick={ () => toggleOff() }>Gallery</a></li>
-        <li><a className="b-header__container-meny-links" data-scroll="contact" href="home.html" onClick={ () => toggleOff() }>Contact</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://www.skiingaroundtheworldbook.com/shop/" onClick={ () => toggleOff() }>Shop</a></li>
-      </ul>
-    </div>)
+            <div
+                className={
+                    "b-header__container " +
+                    (toggle ? "b-header__container--active" : "")
+                }
+            >
+                <ul className="b-header__container-meny">
+                    <li
+                        className="b-header__container-meny-links"
+                        onClick={this.slideToHome}
+                    >
+                        {" "}
+                        Home
+                    </li>
+                    <li
+                        className="b-header__container-meny-links"
+                        onClick={this.slideToAbout}
+                    >
+                        About
+                    </li>
+                    <li
+                        className="b-header__container-meny-links"
+                        onClick={this.slideToMembers}
+                    >
+                        Members
+                    </li>
+                    <li
+                        className="b-header__container-meny-links"
+                        onClick={this.slideToHistory}
+                    >
+                        History
+                    </li>
+                    <li
+                        className="b-header__container-meny-links"
+                        onClick={this.slideToTour}
+                    >
+                        Tour
+                    </li>
+                    <li
+                        className="b-header__container-meny-links"
+                        onClick={this.slideToGallery}
+                    >
+                        Gallery
+                    </li>
+                    <li
+                        className="b-header__container-meny-links"
+                        onClick={this.slideToFooter}
+                    >
+                        Contact
+                    </li>
+                    <li className="b-header__container-meny-links">
+                        <a  className="b-header__container-meny-links"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.skiingaroundtheworldbook.com/shop/"
+                            onClick={() => toggleOff()}
+                        >
+                            Shop
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        );
     }
 }
 

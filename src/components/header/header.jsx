@@ -22,9 +22,18 @@ class Header extends Component {
 
     render() {
         let {toggle} = this.state;
+        let {slidetoAboutBand,slideToHome, slideToMembers,slideToHistory,slideToTour, slideToGallery,slideToFooter} = this.props;
         return (<header className="b-header">
             <div className="b-header__logo-wrapper"><HeaderLogo/></div>
-            <Navbar toggle={toggle} toggleOff={this.toggleOff}/>
+            <Navbar
+            slidetoAboutBand={slidetoAboutBand}
+            slideToHome={slideToHome}
+            slideToMembers={slideToMembers}
+            slideToHistory={slideToHistory}
+            slideToTour={slideToTour}
+            slideToGallery={slideToGallery}
+            slideToFooter={slideToFooter}
+             toggle={toggle} toggleOff={this.toggleOff}/>
             <Hamburger toggle={toggle} toggleState={this.toggleState}/>
         </header>)
     }

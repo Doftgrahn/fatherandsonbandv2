@@ -3,8 +3,8 @@ import React from 'react';
 import Image1 from '../../assets/images/bandet1.jpg';
 import Image2 from '../../assets/images/bandet.jpg';
 
-const AboutBand = () => {
-    return(  <section className="b-info" id="about">
+const AboutBand = ({aboutTheBand}) => {
+    return(  <section ref={aboutTheBand} className="b-info" id="about">
     <div className="b-info__wrapper">
       <div className="b-info__container">
         <h2>About the band</h2>

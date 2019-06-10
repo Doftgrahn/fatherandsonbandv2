@@ -1,8 +1,8 @@
 import React from "react";
 
-const History = () => {
+const History = ({history}) => {
     return (
-        <section className="b-history" id="history">
+        <section ref={history} className="b-history" id="history">
             <div className="b-history__wrapper">
                 <h2>History</h2>
                 <div className="b-history__container">
@@ -29,7 +29,7 @@ const History = () => {
                         <br /> With a mixture of rock ’n' roll, country, blues,
                         evergreens, and original compositions, we always strive
                         to have as much fun on stage as we possibly can! And we
-                        live for the music!{" "}
+                        live for the music!
                     </p>
                 </div>
             </div>
