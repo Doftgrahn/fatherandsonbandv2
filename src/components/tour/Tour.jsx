@@ -17,16 +17,19 @@ const Tour = ({tourSlide}) => {
         return unsubscribe;
     }, []);
 
-    const tourdate = tour.map((e, i) => {
-        let date = e.date.toDate().toLocaleDateString();
-        //let time = e.date.toDate().toLocaleTimeString();
-        return (
-            <p key={i}>
-                <span>{date}</span> <span>{e.location}</span>
-            </p>
-        );
-    });
-    console.log(tour);
+    const tourdate = tour
+        .filter(d => new Date() < new Date(d.date.toDate()))
+        .sort((a, b) => a.date.seconds - b.date.seconds)
+        .map((e, i) => {
+            let date = e.date.toDate().toLocaleDateString();
+            //let time = e.date.toDate().toLocaleTimeString();
+
+            return (
+                <p key={i}>
+                    <span>{date}</span> <span>{e.location}</span>
+                </p>
+            );
+        });
 
     return (
         <section ref={tourSlide} className="b-tour" id="tour">

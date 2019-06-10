@@ -1,10 +1,6 @@
 //@import "../../../../node_modules/swiper/dist/css/swiper.css";
 .thumbs-wrapper {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin:0 auto;
 }
 
 
@@ -18,30 +14,8 @@
         padding: 60px $spacing-regular;
     }
 
-    .swiper-button-next {
-        //background-image: url("../images/arrow-right.svg");
-        fill: none;
-        outline: none;
-    }
-
-    .swiper-button-prev {
-        //background-image: url("../images/arrow-left.svg");
-        fill: none;
-        outline: none;
-    }
-
-    .swiper-pagination-bullet {
-        background: $color-gray;
-        width: 12px;
-        height: 12px;
-
-        &-active {
-            background: $color-red;
-        }
-    }
-
     &__wrapper {
-        display: flex;
+        //display: flex;
         align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
@@ -59,7 +33,7 @@
 
     &__container {
         background-color: $color-white;
-        max-width: 100%;
+        //max-width: 100%;
         @media screen and (min-width:800px) {
             max-width: 95%;
         }

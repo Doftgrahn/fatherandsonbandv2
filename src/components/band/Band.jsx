@@ -60,7 +60,7 @@ const Band = ({bandMembers}) => {
     ));
 
     return (
-        <section ref={bandMembers} className="b-band" id="members">
+        <section ref={bandMembers} className="b-band">
             <h2 className="">Members</h2>
             <div className="b-band__container">{renderBand}</div>
         </section>

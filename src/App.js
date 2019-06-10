@@ -39,7 +39,7 @@ const App = () => {
     };
     const slideToFooter = () => {
         window.scrollTo(0, footer.current.offsetTop);
-    }
+    };
 
     return (
         <div className="App">
