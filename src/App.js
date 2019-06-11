@@ -7,6 +7,7 @@ import History from "./components/history/History";
 import Tour from "./components/tour/Tour";
 import Gallery from "./components/gallery/Gallery";
 import Footer from "./components/footer/Footer";
+
 import "./App.scss";
 
 const App = () => {

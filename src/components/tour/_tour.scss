@@ -1,6 +1,6 @@
 .b-tour {
-    //background-image: url('../../assets/images/texture.jpg');
-    background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
+    background-image: url("./assets/images/texture.jpg");
+    //background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
     border-top: 30px solid $color-red;
     border-bottom: 30px solid $color-red;
     padding: 40px $spacing-regular;
@@ -14,7 +14,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        max-width: $width-content;
+        max-width: 940px;
         margin: 0 auto;
     }
 
@@ -24,33 +24,45 @@
     }
 
     &__container {
-        background-color: $color-red;
-        width: 95%;
-        padding: 1em;
+        //background-color: $color-red;
+        width: 100%;
+        padding: 0 1em;
         //box-shadow: 2px 2px $color-dark;
         // box-shadow: 2px 2px 4px #312d2d94;
         @media screen and (min-width: 800px) {
-            padding: 2em;
+            //padding: 2em;
         }
     }
 
     &__dates {
+        padding: 0 1em;
+        letter-spacing: 1px;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
         justify-content: center;
         // width: 100%;
+        @media screen and (min-width: 800px) {
+            justify-content: column;
+        }
+
         & p {
-            display: inline-block;
-            padding: $spacing-regular;
+            //font-weight: bold;
+            //display: inline-block;
+            //padding: $spacing-regular;
             margin: 0;
-            padding: 10px;
+            padding: 10px 20px;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: flex-start;
             flex-wrap: wrap;
-            align-items: center;
+            align-items: flex-start;
+            @media screen and (min-width: 800px) {
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+            }
 
             &:nth-child(odd) {
                 background-color: $color-dark;
@@ -60,7 +72,7 @@
             &:nth-child(even) {
                 background-color: $color-white;
             }
-
+            /*
             & span {
                 text-align: left;
 
@@ -75,7 +87,7 @@
                 &:nth-child(3) {
                     margin-left: auto;
                 }
-            }
+            }*/
         }
     }
 }

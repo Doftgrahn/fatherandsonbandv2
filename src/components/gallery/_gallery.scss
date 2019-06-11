@@ -3,12 +3,34 @@
 .thumbs-wrapper {
     margin: 0 auto;
 }
-
+.carousel {
+    .slide {
+        display: flex;
+        justify-content: center;
+        background: $color-white;
+    }
+    .thumbs {
+        padding-left: 0;
+        text-align: center;
+    }
+    .control-dots .dot {
+        background: $color-red-light;
+        box-shadow: none;
+        height: 10px;
+        width: 10px;
+    }
+    .carousel-status {
+        padding: 0 20px;
+        text-shadow: none;
+        color: $color-red-light;
+        font-size: 14px;
+    }
+}
 .b-gallery {
     padding: 40px $spacing-regular;
     margin: 0 auto;
     background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
-    //background-image: url("../images/texture.jpg");
+    background-image: url("./assets/images/texture.jpg");
     @media screen and (min-width:800px) {
         padding: 60px $spacing-regular;
     }

@@ -40,16 +40,29 @@
             cursor: pointer;
             font-family: inherit;
             padding: 0;
+            letter-spacing: 1px;
             font-size: 40px;
             color: $color-light;
             font-family: $font-headline;
+            transition: color .2s ease;
+
             @media screen and (min-width: 800px) {
                 font-size: 20px;
+                margin-left: 20px;
+            }
+            &:hover {
+                color: $color-red-light;
             }
 
             a {
-                color: $color-light;
+                letter-spacing: 1px;
+                font-size: 40px;
+                color: inherit;
                 font-family: inherit;
+                @media screen and (min-width: 800px) {
+                    font-size: 20px;
+                }
+
             }
         }
 
@@ -67,12 +80,12 @@
         height: auto;
         padding: 0;
         @media screen and (min-width:800px) {
-            width: 150px;
+            width: 100px;
         }
 
         path {
             stroke: none;
-            fill: $color-gray;
+            fill: $color-light;
         }
     }
 
@@ -96,16 +109,15 @@
             }
 
             a {
-                font-size: 25px;
+                //font-size: 25px;
                 // padding: 20px;
-                text-align: left;
+                //text-align: left;
                 text-decoration: none;
                 letter-spacing: 1px;
-                color: gray;
                 color: $color-light;
                 @media screen and (min-width: 800px) {
-                    padding: 0 10px;
-                    font-size: 20px;
+                //    padding: 0 10px;
+                    //font-size: 20px;
                 }
 
                 &:hover {
