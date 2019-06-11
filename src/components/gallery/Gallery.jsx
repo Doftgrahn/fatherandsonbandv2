@@ -24,18 +24,21 @@ const Gallery = ({gallerySlide}) => {
         {id: 7, picture: Waldruhe}
     ]);
 
-    const pictures = gallery.map(pic => <div className="b-gallery__container-img" key={pic.id}> <img src={pic.picture} alt=""/> </div>)
+    const pictures = gallery.map(pic => (
+        <div className="b-gallery__container-img" key={pic.id}>
+            {" "}
+            <img src={pic.picture} alt="" />{" "}
+        </div>
+    ));
 
-    return(<section ref={gallerySlide} className="b-gallery" id="gallery">
-    <div className="b-gallery__wrapper ">
-
-        <h2>Gallery</h2>
-        <Carousel autoPlay>
-{pictures}
-         </Carousel>
-         </div>
-         </section>)
-
+    return (
+        <section ref={gallerySlide} className="b-gallery" id="gallery">
+            <div className="b-gallery__wrapper ">
+                <h2>Gallery</h2>
+                <Carousel autoPlay>{pictures}</Carousel>
+            </div>
+        </section>
+    );
 };
 
 export default Gallery;

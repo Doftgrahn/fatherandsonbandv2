@@ -1,13 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const Hamburger = ({toggle, toggleState}) =>  {
-
-        return (<div className={"b-header__hamburgerContainer " + (toggle ? 'active' : '')} onClick={() => toggleState()}>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>)
-
-}
+const Hamburger = ({toggle, toggleState}) => {
+    return (
+        <div
+            className={
+                "b-header__hamburgerContainer " + (toggle ? "active" : "")
+            }
+            onClick={() => toggleState()}
+        >
+            <span />
+            <span />
+            <span />
+        </div>
+    );
+};
 
 export default Hamburger;

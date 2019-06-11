@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px 20px;
+    padding: 0 20px;
     background-color: $color-dark;
     @media screen and (min-width: 800px) {
         position: fixed;
@@ -44,12 +44,12 @@
             font-size: 40px;
             color: $color-light;
             font-family: $font-headline;
-            transition: color .2s ease;
-
+            transition: color 0.2s ease;
             @media screen and (min-width: 800px) {
                 font-size: 20px;
                 margin-left: 20px;
             }
+
             &:hover {
                 color: $color-red-light;
             }
@@ -62,7 +62,6 @@
                 @media screen and (min-width: 800px) {
                     font-size: 20px;
                 }
-
             }
         }
 
@@ -75,8 +74,9 @@
     }
 
     &__logo-wrapper {
+        cursor: pointer;
         display: block;
-        width: 85px;
+        width: 80px;
         height: auto;
         padding: 0;
         @media screen and (min-width:800px) {
@@ -116,7 +116,7 @@
                 letter-spacing: 1px;
                 color: $color-light;
                 @media screen and (min-width: 800px) {
-                //    padding: 0 10px;
+                    //    padding: 0 10px;
                     //font-size: 20px;
                 }
 

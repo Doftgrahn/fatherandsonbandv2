@@ -3,17 +3,17 @@
     //background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
     border-top: 30px solid $color-red;
     border-bottom: 30px solid $color-red;
-    padding: 40px $spacing-regular;
+    padding: 20px 5px;
     @media screen and (min-width: 800px) {
         padding: 60px $spacing-regular;
     }
 
     &__wrapper {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        //display: flex;
+        //flex-direction: row;
+        //flex-wrap: wrap;
+        //justify-content: center;
+        //align-items: center;
         max-width: 940px;
         margin: 0 auto;
     }
@@ -35,7 +35,7 @@
     }
 
     &__dates {
-        padding: 0 1em;
+        padding: 10px 5px;
         letter-spacing: 1px;
         display: flex;
         flex-direction: column;
@@ -44,6 +44,7 @@
         justify-content: center;
         // width: 100%;
         @media screen and (min-width: 800px) {
+            padding: 0 1em;
             justify-content: column;
         }
 
@@ -54,11 +55,12 @@
             margin: 0;
             padding: 10px 20px;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: flex-start;
             flex-wrap: wrap;
             align-items: flex-start;
             @media screen and (min-width: 800px) {
+                flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: row;
@@ -87,7 +89,8 @@
                 &:nth-child(3) {
                     margin-left: auto;
                 }
-            }*/
+            }
+            */
         }
     }
 }
