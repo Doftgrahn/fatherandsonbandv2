@@ -3,29 +3,40 @@
 .thumbs-wrapper {
     margin: 0 auto;
 }
+
 .carousel {
-    .slide {
-        display: flex;
-        justify-content: center;
+    .slider {
+        //display: flex;
+        //justify-content: center;
         background: $color-white;
     }
+
     .thumbs {
         padding-left: 0;
         text-align: center;
     }
+
     .control-dots .dot {
         background: $color-red-light;
         box-shadow: none;
-        height: 10px;
-        width: 10px;
+        height: 12px;
+        width: 12px;
+        outline: none;
     }
+
     .carousel-status {
         padding: 0 20px;
         text-shadow: none;
         color: $color-red-light;
         font-size: 14px;
     }
+
+    .control-arrow {
+        outline: none;
+    }
+
 }
+
 .b-gallery {
     padding: 40px $spacing-regular;
     margin: 0 auto;

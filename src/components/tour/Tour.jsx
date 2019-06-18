@@ -18,14 +18,14 @@ const Tour = ({tourSlide}) => {
     }, []);
 
     const tourdate = tour
-        .filter(d => new Date() < new Date(d.date.toDate()))
+        /*.filter(d => new Date() < new Date(d.date.toDate()))*/
         .sort((a, b) => a.date.seconds - b.date.seconds)
         .map((e, i) => {
             let date = e.date.toDate().toLocaleDateString();
             //let time = e.date.toDate().toLocaleTimeString();
 
             return (
-                <p key={i}>
+                <p className={new Date() > new Date(e.date.toDate()) ? 'past' : ''} key={i}>
                     <span>{e.location}</span> <span>{date}</span>
                 </p>
             );

@@ -26,8 +26,7 @@ const Gallery = ({gallerySlide}) => {
 
     const pictures = gallery.map(pic => (
         <div className="b-gallery__container-img" key={pic.id}>
-            {" "}
-            <img src={pic.picture} alt="" />{" "}
+            <img src={pic.picture} alt="" />
         </div>
     ));
 

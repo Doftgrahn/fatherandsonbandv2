@@ -85,7 +85,8 @@ class Navbar extends Component {
                         Contact
                     </li>
                     <li className="b-header__container-meny-links">
-                        <a  className="b-header__container-meny-links"
+                        <a
+                            className="b-header__container-meny-links"
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://www.skiingaroundtheworldbook.com/shop/"

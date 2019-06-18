@@ -26,7 +26,7 @@ const Band = ({bandMembers}) => {
             name: "Viktor Lenberg",
             instrument: "Bass",
             info:
-                "No one knows the base better than our own Vikctor Lenberg, his groove cannot be missed."
+                "No one knows the base better than our own Viktor Lenberg, his groove cannot be missed."
         },
         {
             picture: SimonPic,
@@ -40,7 +40,7 @@ const Band = ({bandMembers}) => {
             name: "Mickel Löfvenius",
             instrument: "Drums",
             info:
-                "Mickel Löfvenius is a key-member and he likes to call himseld master of logistics. His style is famour for being inoovative ans awesome"
+                "Mickel Löfvenius is a key-member and he likes to call himseld master of logistics. His style is famous for being inoovative and awesome"
         }
     ]);
 

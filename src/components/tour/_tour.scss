@@ -66,6 +66,7 @@
                 flex-direction: row;
             }
 
+
             &:nth-child(odd) {
                 background-color: $color-dark;
                 color: $color-white;
@@ -93,4 +94,8 @@
             */
         }
     }
+}
+
+.past {
+    opacity: 0.6;
 }
