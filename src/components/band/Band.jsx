@@ -19,14 +19,14 @@ const Band = ({bandMembers}) => {
             name: "Jimmy Petterson",
             instrument: "Vocals, Guitar",
             info:
-                "The ski bum, Jimmy Petterson, is the master of it all. Nobody can multi-task like this man."
+                "Jimmy is a Renaissance Man—musician, singer, showman . . . yes, but also journalist, author, photographer, travel arranger, ski instructor, and philosopher. Perhaps we should merely say Lebensküntler, and leave it at that."
         },
         {
             picture: SimonImg,
             name: "Simon Grahn",
             instrument: "Saxophone, Flute, Clarinet, Harmonica & Song",
             info:
-                "Simon is an multi-instrumentalist that loves to battle the keys, and he always tries to be dynamic and initiative."
+                "Simon is an multi-instrumentalist who gives endless soul and dynamic energy to everything he does. His smile and his music is contagious."
         },
         {
             picture: ViktorImg,

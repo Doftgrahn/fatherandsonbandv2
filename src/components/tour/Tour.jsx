@@ -21,19 +21,19 @@ const Tour = ({tourSlide}) => {
         .sort((a, b) => a.date.seconds - b.date.seconds)
         .map((e, i) => {
             const date = e.date.toDate().toLocaleDateString();
-            const time = e.date.toDate().toLocaleTimeString();
+            const time = e.date.toDate().toLocaleTimeString().match(/\d{2}:\d{2}|[AMP]+/g).join(' ')
 
-            const replaceTag = e => {
-                if (e && typeof e === "string" && e.includes("://www")) {
+            const replaceTag = (e) => {
+                if (e.info && typeof e.info === "string" && e.info.includes("://www")) {
                     return (
-                        <a target="_blank" rel="noopener noreferrer" href={e}>
+                        <a target="_blank" rel="noopener noreferrer" href={e.info}>
                             Link
                         </a>
                     );
-                } else if (e && !isNaN(e)) {
-                    return <a href={`tel:${Number(e)}`}>Reservation {e}</a>;
+                } else if (e.phone) {
+                    return <><span>{e.info}</span> <a href={`tel:${Number(e.phone)}`}>{e.phone}</a></>;
                 } else {
-                    return <span>{e}</span>;
+                    return <span>{e.info}</span>;
                 }
             };
 
@@ -46,7 +46,7 @@ const Tour = ({tourSlide}) => {
                 >
                     <div className="info-tour">
                         <span>{e.location}</span>
-                        {replaceTag(e.info)}
+                        <span>{replaceTag(e)}</span>
                     </div>
                     <div className="date-tour">
                         <span>{date}</span>

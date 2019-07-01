@@ -1,11 +1,9 @@
 import React from "react";
 
-import earlyImg from "../../assets/historyImg/earlyImg.jpg";
+import EarlyImg from "../../assets/historyImg/earlyImg.jpg";
 import Frolunda from "../../assets/historyImg/frolunda.jpg";
 import Venice from "../../assets/historyImg/IMG_8488.jpg";
 import VenicePolice from "../../assets/historyImg/IMG_8491.jpg";
-
-//import Image2 from "../../assets/images/bandet.jpg";
 
 const History = ({history}) => {
     return (
@@ -24,16 +22,16 @@ const History = ({history}) => {
                         the classroom, the school choir, and your private
                         lessons and take the show on the road.”
                     </p>
-                    <div>
-                        <img
-                            className="b-history__container-img"
-                            src={earlyImg}
-                            alt="early"
-                        />
-                        <span className="b-history__container-caption">
-                            The original Father & Son trio in one of their first
-                            performances(2008).
-                        </span>
+                    <div className="b-history__container-info">
+                        <div className="b-history__container-info-img">
+                            <img src={EarlyImg} alt="early" />
+                        </div>
+                        <div className="b-history__container-info-caption">
+                            <span>
+                                The original Father & Son trio in one of their
+                                first performances (2008).
+                            </span>
+                        </div>
                     </div>
                     <p>
                         Jimmy organized a 15-country, 2-month tour through
@@ -48,15 +46,17 @@ const History = ({history}) => {
                         showmanship,” according to Jimmy. “People are
                         busy—hurrying around town with a thousand things to do.
                     </p>
-                    <img
-                        className="b-history__container-img"
-                        src={Venice}
-                        alt="Venice"
-                    />
-                    <span>
-                        Erik and Elie learning the ropes on the streets of
-                        Venice (2009).
-                    </span>
+                    <div className="b-history__container-info">
+                        <div className="b-history__container-info-img">
+                            <img src={Venice} alt="Venice" />
+                        </div>
+                        <div className="b-history__container-info-caption">
+                            <span>
+                                Erik and Elie learning the ropes on the streets
+                                of Venice (2009).
+                            </span>
+                        </div>
+                    </div>
                     <p>
                         You have to do something special to attract their
                         attention and get them to stop, listen, and throw a few
@@ -65,15 +65,22 @@ const History = ({history}) => {
                         eighties, and it was so much fun to get back to the
                         street-music scene with Erik and Elie in 2009.
                     </p>
-                    <img
-                        className="b-history__container-img"
-                        src={VenicePolice}
-                        alt="venice2"
-                    />
-                    <span>
-                        Street-singing often has it's drawbacks...like the
-                        police. The Venice performance did not last long.
-                    </span>
+                    <div className="b-history__container-info">
+                        <div className="b-history__container-info-img">
+                            <img
+                                className="b-history__container-img"
+                                src={VenicePolice}
+                                alt="venice2"
+                            />
+                        </div>
+                        <div className="b-history__container-info-caption">
+                            <span>
+                                Street-singing often has it's drawbacks...like
+                                the police. The Venice performance did not last
+                                long.
+                            </span>
+                        </div>
+                    </div>
                     <p>
                         They learned a lot, and I think you can see a product of
                         their street skills in the show that we do today. ”For
@@ -90,15 +97,17 @@ const History = ({history}) => {
                         band’s summer tour in Austria, and soon he was an
                         indispensible part of the band.
                     </p>
-                    <img
-                        className="b-history__container-img"
-                        src={Frolunda}
-                        alt="frolunda"
-                    />
-                    <span>
-                        Simon Grahn's initial performance with the band, at
-                        Frölunda Kulturhus(2009).
-                    </span>
+                    <div className="b-history__container-info">
+                        <div className="b-history__container-info-img">
+                            <img src={Frolunda} alt="frolunda" />
+                        </div>
+                        <div className="b-history__container-info-caption">
+                            <span className="b-history__container-info-caption">
+                                Simon Grahn's initial performance with the band,
+                                at Frölunda Kulturhus(2009).
+                            </span>
+                        </div>
+                    </div>
                     <p>
                         In 2015, the band expanded by adding a bass player and
                         drummer, and their name was changed from Father & Son +
