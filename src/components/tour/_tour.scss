@@ -48,7 +48,7 @@
             justify-content: column;
         }
 
-        & p {
+        .tour-details {
             //font-weight: bold;
             //display: inline-block;
             //padding: $spacing-regular;
@@ -64,8 +64,21 @@
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: row;
+                line-height: 1.7;
             }
 
+            .info-tour {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .date-tour {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                span {}
+            }
 
             &:nth-child(odd) {
                 background-color: $color-dark;
@@ -97,5 +110,5 @@
 }
 
 .past {
-    opacity: 0.6;
+    opacity: 0.3;
 }
