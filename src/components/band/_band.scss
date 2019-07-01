@@ -4,7 +4,6 @@
     background-image: url("./assets/images/texture.jpg");
     padding: 40px 20px;
     border-top: 30px solid $color-red;
-
     @media screen and (min-width: 800px) {
         padding: 60px 20px;
     }
@@ -25,12 +24,20 @@
 
     &__member {
         background: $color-white;
+        display: flex;
+        flex-direction: column;
         width: 30%;
         min-width: 320px;
         max-width: 100%;
         padding: 10px;
         margin: 10px;
         box-shadow: 2px 2px 4px #3e3e3e99;
+
+        &-img {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
 
         &-info {
             position: relative;

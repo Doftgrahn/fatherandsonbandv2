@@ -1,6 +1,11 @@
 import React from "react";
+
+import {BrowserRouter as Router} from "react-router-dom";
+
 import Header from "./components/header/header";
-import Main from "./components/Main";
+//import Main from "./components/Main";
+
+import Routing from "./general/routing";
 
 import Footer from "./components/footer/Footer";
 
@@ -40,6 +45,7 @@ const App = () => {
 
     return (
         <div className="App">
+            <Router>
             <Header
                 slideToHome={slideToHome}
                 slidetoAboutBand={slidetoAboutBand}
@@ -49,14 +55,23 @@ const App = () => {
                 slideToGallery={slideToGallery}
                 slideToFooter={slideToFooter}
             />
-            <Main
+                <Routing
+                    hero={hero}
+                    aboutTheBand={aboutTheBand}
+                    bandMembers={bandMembers}
+                    history={history}
+                    tourSlide={tour}
+                    gallerySlide={gallery}
+                />
+                {/*<Main
                 hero={hero}
                 aboutTheBand={aboutTheBand}
                 bandMembers={bandMembers}
                 history={history}
                 tourSlide={tour}
                 gallerySlide={gallery}
-            />
+            />*/}
+            </Router>
             <Footer footer={footer} />
         </div>
     );

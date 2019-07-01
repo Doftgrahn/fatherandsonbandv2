@@ -11,6 +11,14 @@
         background: $color-white;
     }
 
+    .slide {
+        .legend {
+            left: 95%;
+            bottom: -0px;
+            z-index: 1;
+        }
+    }
+
     .thumbs {
         padding-left: 0;
         text-align: center;
@@ -34,7 +42,6 @@
     .control-arrow {
         outline: none;
     }
-
 }
 
 .b-gallery {

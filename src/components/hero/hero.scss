@@ -41,6 +41,9 @@
         right: 0;
         top: 0;
         bottom: 0;
+        @media screen and (min-width: 800px) {
+            object-position: center;
+        }
     }
 
     &__content {
@@ -60,6 +63,7 @@
 $dash: 500;
 /* SVG --- Hero ---*/
 .wrapper {
+    transform: translateY(-140%);
     // height: 100%;
     // width: 100%;
     z-index: -1;

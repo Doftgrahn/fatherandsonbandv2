@@ -1,41 +1,53 @@
 .b-history {
-  border-top: 30px solid $color-red;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-  padding: $spacing-regular;
-  background-color: $color-light;
-  @media screen and (min-width: 800px) {
-    padding: 60px $spacing-regular;
-  }
-
-  &__wrapper {
+    border-top: 30px solid $color-red;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    //width:100%;
-    max-width: 940px;
-    padding: 1em;
-  }
-
-  &__container {
-    color: $color-gray;
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 0;
+    flex-direction: row;
+    padding: $spacing-regular;
+    background-color: $color-light;
     @media screen and (min-width: 800px) {
-      padding: 0 1em;
+        padding: 60px $spacing-regular;
     }
 
-    & p {
-      color: $color-dark;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        //width:100%;
+        max-width: 940px;
+        padding: 1em;
     }
-  }
+
+    &__container {
+        color: $color-gray;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        @media screen and (min-width: 800px) {
+            padding: 0 1em;
+        }
+
+        & p {
+            text-align: justify;
+            margin: 0;
+            color: $color-dark;
+            text-indent: 5%;
+
+            &:first-child {
+                text-indent: 0;
+                //font-size: 16px;
+            }
+
+            & span {
+                //font-size: 16px;
+            }
+        }
+    }
 }

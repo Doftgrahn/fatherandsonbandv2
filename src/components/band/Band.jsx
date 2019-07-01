@@ -1,25 +1,32 @@
 import React, {useState} from "react";
 
-import JimmyImg from "../../assets/images/jimmy.jpg";
-import ErikImg from "../../assets/images/erikcamel.jpg";
+import JimmyImg from "../../assets/images/jimmyBehindBack.jpg";
+import ErikImg from "../../assets/images/PhotoErik.jpg";
 import ViktorImg from "../../assets/images/lenberg.jpg";
-import SimonPic from "../../assets/images/simon.jpg";
-import MickelPic from "../../assets/images/Mickel.jpg";
+import SimonImg from "../../assets/images/simonSax.jpg";
+import MickelImg from "../../assets/images/MickeNew.jpg";
 
 const Band = ({bandMembers}) => {
     const [band] = useState([
         {
+            picture: ErikImg,
+            name: "Erik Petterson Sjöqvist",
+            instrument: "Vocals ,Lead guitar, Keyboard, Banjo, Harmonica, Base",
+            info: "Our own little camel back. He truly loves G# and his capo."
+        },
+        {
             picture: JimmyImg,
-            name: "Jimmy Peterson",
-            instrument: "Guitarr, Vox",
+            name: "Jimmy Petterson",
+            instrument: "Vocals, Guitar",
             info:
                 "The ski bum, Jimmy Petterson, is the master of it all. Nobody can multi-task like this man."
         },
         {
-            picture: ErikImg,
-            name: "Erik Petterson Sjöqvist",
-            instrument: "Lead guitar, Vox",
-            info: "Our own little camel back. He truly loves G# and his capo."
+            picture: SimonImg,
+            name: "Simon Grahn",
+            instrument: "Saxophone, Flute, Clarinet, Harmonica & Song",
+            info:
+                "Simon is an multi-instrumentalist that loves to battle the keys, and he always tries to be dynamic and initiative."
         },
         {
             picture: ViktorImg,
@@ -28,15 +35,9 @@ const Band = ({bandMembers}) => {
             info:
                 "No one knows the base better than our own Viktor Lenberg, his groove cannot be missed."
         },
+
         {
-            picture: SimonPic,
-            name: "Simon Grahn",
-            instrument: "Saxophone, flute, clarinet, harmonica & song",
-            info:
-                "Simon is an multi-instrumentalist that loves to battle the keys, and he always tries to be dynamic and initiative."
-        },
-        {
-            picture: MickelPic,
+            picture: MickelImg,
             name: "Mickel Löfvenius",
             instrument: "Drums",
             info:
@@ -45,7 +46,7 @@ const Band = ({bandMembers}) => {
     ]);
 
     const renderBand = band.map((member, i) => (
-        <div key={i} className="b-band__member" data-aos="zoom-out-left">
+        <div key={i} className="b-band__member">
             <img
                 src={member.picture}
                 className="b-band__member-img"

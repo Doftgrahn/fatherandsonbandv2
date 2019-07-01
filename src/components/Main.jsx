@@ -6,25 +6,24 @@ import History from "./history/History";
 import Tour from "./tour/Tour";
 import Gallery from "./gallery/Gallery";
 
+const Main = ({
+    hero,
+    aboutTheBand,
+    bandMembers,
+    history,
+    tourSlide,
+    gallerySlide
+}) => {
+    return (
+        <div className="App">
+            <Hero hero={hero} />
+            <AboutBand aboutTheBand={aboutTheBand} />
+            <Band bandMembers={bandMembers} />
+            <History history={history} />
+            <Tour tourSlide={tourSlide} />
+            <Gallery gallerySlide={gallerySlide} />
+        </div>
+    );
+};
 
-    const Main = ({
-        hero,
-        aboutTheBand,
-        bandMembers,
-        history,
-        tourSlide,
-        gallerySlide
-    }) => {
-        return (
-            <div className="App">
-                <Hero hero={hero} />
-                <AboutBand aboutTheBand={aboutTheBand} />
-                <Band bandMembers={bandMembers} />
-                <History history={history} />
-                <Tour tourSlide={tourSlide} />
-                <Gallery gallerySlide={gallerySlide} />
-            </div>
-        );
-    };
-
-    export default Main;
+export default Main;
