@@ -34,6 +34,11 @@ const Footer = ({footer}) => {
         </div>
       </div>
 
+      <div className="b-footer__content-creator">
+      <p>Made by SimonGrahn</p>
+      <a href="mailto:Simon.grahn@gmail.com">Contact me</a>
+      </div>
+
     </div>
   </footer>)
 }

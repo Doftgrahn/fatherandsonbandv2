@@ -12,14 +12,15 @@ const Band = ({bandMembers}) => {
             picture: ErikImg,
             name: "Erik Petterson Sjöqvist",
             instrument: "Vocals, Lead guitar, Keyboard, Banjo, Harmonica, Bass",
-            info: "Our own little camel back. He truly loves G# and his capo."
+            info:
+                "Piano lessons from age 4, guitar instruction from age 10, 7 years of music and middle and high school, a year of musical-theater studies, voice courses at the Complete Vocal Institute in Copenhagen, and an intense course in music production. Erik has devoted his life to music. "
         },
         {
             picture: JimmyImg,
             name: "Jimmy Petterson",
             instrument: "Vocals, Guitar",
             info:
-                "Jimmy is a Renaissance Man—musician, singer, showman . . . yes, but also journalist, author, photographer, travel arranger, ski instructor, and philosopher. Perhaps we should merely say Lebensküntler, and leave it at that."
+                "Jimmy is a Renaissance man, singer, showman ... yes, but also journalist, author, photographer, travel arranger, ski instructor, and philosopher. Perhaps we should merely say Lebensküntler, and leave it at that."
         },
         {
             picture: SimonImg,
@@ -33,7 +34,7 @@ const Band = ({bandMembers}) => {
             name: "Viktor Lenberg",
             instrument: "Bass",
             info:
-                "No one knows the base better than our own Viktor Lenberg, his groove cannot be missed."
+                "Viktor - AKA Dr. Groove - has done a musical journey through genres like rock, reggae, disco and soul. This mix makes him essential in bringing a funky flavor to the band’s rhythm section."
         },
         {
             picture: MickelImg,

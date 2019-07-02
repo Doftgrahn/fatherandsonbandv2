@@ -28,6 +28,14 @@ const Tour = ({tourSlide}) => {
                 .match(reg)
                 .join(" ");
 
+            let timeTo;
+            if (e.dateTo)
+                timeTo = e.dateTo
+                    .toDate()
+                    .toLocaleTimeString()
+                    .match(reg)
+                    .join(" ");
+
             const replaceTag = data => {
                 if (data.info && data.info.includes("://www")) {
                     return (
@@ -44,7 +52,7 @@ const Tour = ({tourSlide}) => {
                 } else if (data.phone) {
                     return (
                         <>
-                            <span>{data.info}</span>{" "}
+                            <span>{data.info}: </span>
                             <span>
                                 <a href={`tel:${Number(data.phone)}`}>
                                     {data.phone}
@@ -69,8 +77,15 @@ const Tour = ({tourSlide}) => {
                         <span>{replaceTag(e)}</span>
                     </div>
                     <div className="date-tour">
-                        <span>{date}</span>
-                        <span>{time}</span>
+                        {e.location === "Private Event" ? null : (
+                            <>
+                                <span>{date}</span>
+                                <span>
+                                    {time}
+                                    {timeTo ? <> -{timeTo}</> : null}
+                                </span>
+                            </>
+                        )}
                     </div>
                 </div>
             );

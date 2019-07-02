@@ -14,13 +14,14 @@ const History = ({history}) => {
                     <p>
                         <span>Erik Petterson Sjöqvist</span> and Elie Sandberg
                         met each other in 6th grade when they began studying
-                        together in the special music section of Flatåsskolan.
-                        Seven years and thousands of hours of music later, they
-                        both had graduated from high school, and Erik’s father,
-                        Jimmy, came up with a suggestion—“it’s time to get some
-                        real world experience . . . take all you have learned in
-                        the classroom, the school choir, and your private
-                        lessons and take the show on the road.”
+                        together in the special music section of section of
+                        Flatåsskolan, in Gothenburg, Sweden.. Seven years and
+                        thousands of hours of music later, they both had
+                        graduated from high school, and Erik’s father, Jimmy,
+                        came up with a suggestion—“it’s time to get some real
+                        world experience . . . take all you have learned in the
+                        classroom, the school choir, and your private lessons
+                        and take the show on the road.”
                     </p>
                     <div className="b-history__container-info">
                         <div className="b-history__container-info-img">
@@ -28,8 +29,8 @@ const History = ({history}) => {
                         </div>
                         <div className="b-history__container-info-caption">
                             <span>
-                                The original Father & Son trio in one of their
-                                first performances (2008).
+                                The original The original Father & Son + 1 trio
+                                in one of their first performances (2008).
                             </span>
                         </div>
                     </div>
@@ -83,7 +84,7 @@ const History = ({history}) => {
                     </div>
                     <p>
                         They learned a lot, and I think you can see a product of
-                        their street skills in the show that we do today. ”For
+                        their street skills in the way they perform today. For
                         the next two summers, the group focused on gigs in
                         Austria, Finland and Norway, and at the tail end of
                         their third summer tour, they made their Göteborg debut
@@ -91,7 +92,7 @@ const History = ({history}) => {
                         Friday, Sept. 9, the trio inaugurated a history of rock
                         ‘n’ roll show, which they have been performing on and
                         off ever since. During that show, they asked saxophonist
-                        and singer, Simon Grahn if he would join them on stage
+                        and singer, Simon Grahnn if he would join them on stage
                         as a guest artist for a few numbers. For a couple of
                         summers, Simon continued to be a guest artist on the
                         band’s summer tour in Austria, and soon he was an
@@ -115,9 +116,15 @@ const History = ({history}) => {
                         band’s drummer, while the bass position has been filled
                         by a variety of people until today, Viktor Lenberg is
                         the permanent bass player. Meanwhile, Erik was studying
-                        music production home in Sweden. In 2018, the band
-                        released their second CD—Rockin’, Rollin’, & Ramblin,’
-                        entirely produced by Erik in his home studio. The band,
+                        music production home in Sweden. In 2017, Elie became a
+                        father and had to leave the band. For the next two
+                        summers, he was replaced by Simon Ericson on lead
+                        guitar. In the summer of 2018,the band released their
+                        second CD—Rockin’, Rollin’, & Ramblin,’ entirely
+                        produced by Erik in his home studio. Erik also spent
+                        intensive hours practicing lead guitar. For the summer
+                        of 2019, Erik has moved from his keyboard to the
+                        electric guitar. To make a long story short, the band,
                         in one form or another, has now been in existence for
                         more than a dozen years, and still going strong.
                     </p>
