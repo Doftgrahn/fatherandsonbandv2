@@ -13,27 +13,28 @@ import Simon from "../../assets/images/gallery/Simon.jpg";
 import Waldruhe from "../../assets/images/gallery/Waldruhe.jpg";
 import Crazy from "../../assets/images/gallery/IMG_2105.jpg";
 import Crazy2 from "../../assets/images/gallery/IMG_2107.jpg";
-import NachBar from "../../assets/images/gallery/nachbar.jpg";
+import ErikSing from "../../assets/images/gallery/erikSing.jpg";
+
+/*import NachBar from "../../assets/images/gallery/nachbar.jpg";*/
 
 const Gallery = ({gallerySlide}) => {
     const [gallery] = useState([
-        {id: 0, picture: Crowd, info: "photo by Simon"},
-        {id: 1, picture: ErikandMickel},
-        {id: 2, picture: Img},
-        {id: 3, picture: Lake},
-        {id: 4, picture: Mickel},
-        {id: 5, picture: Ovation},
-        {id: 6, picture: Simon},
-        {id: 7, picture: Waldruhe},
-        {id: 8, picture: Crazy},
-        {id: 9, picture: Crazy2},
-        {id: 10, picture: NachBar}
+        Ovation,
+        Crowd,
+        ErikandMickel,
+        Img,
+        Lake,
+        Mickel,
+        Simon,
+        Waldruhe,
+        Crazy,
+        Crazy2,
+        ErikSing
     ]);
 
-    const pictures = gallery.map(pic => (
-        <div className="b-gallery__container-img" key={pic.id}>
-            <img src={pic.picture} alt="" />
-            <p className="legend">{pic.info}</p>
+    const pictures = gallery.map((pic, i) => (
+        <div className="b-gallery__container-img" key={i}>
+            <img src={pic} alt="GalleryPictures" />
         </div>
     ));
 

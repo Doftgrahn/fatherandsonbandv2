@@ -3,8 +3,8 @@ import React from "react";
 import {Switch, Route} from "react-router-dom";
 
 import Main from "../components/Main";
-import Press from "../components/Press";
-import Love from "../components/Love";
+//import Press from "../components/Press";
+//import Love from "../components/Love";
 
 const Routing = ({
     hero,
@@ -30,8 +30,21 @@ const Routing = ({
                     />
                 )}
             />
-            <Route path="/press" component={Press} />
-            <Route path="/love" component={Love} />
+            <Route
+                path="**"
+                render={() => (
+                    <Main
+                        hero={hero}
+                        aboutTheBand={aboutTheBand}
+                        bandMembers={bandMembers}
+                        history={history}
+                        tourSlide={tourSlide}
+                        gallerySlide={gallerySlide}
+                    />
+                )}
+            />
+            {/*<Route path="/press" component={Press} />
+            <Route path="/love" component={Love} />*/}
         </Switch>
     );
 };

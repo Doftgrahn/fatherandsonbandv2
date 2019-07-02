@@ -11,7 +11,7 @@ const Band = ({bandMembers}) => {
         {
             picture: ErikImg,
             name: "Erik Petterson Sjöqvist",
-            instrument: "Vocals ,Lead guitar, Keyboard, Banjo, Harmonica, Base",
+            instrument: "Vocals, Lead guitar, Keyboard, Banjo, Harmonica, Bass",
             info: "Our own little camel back. He truly loves G# and his capo."
         },
         {
@@ -35,11 +35,10 @@ const Band = ({bandMembers}) => {
             info:
                 "No one knows the base better than our own Viktor Lenberg, his groove cannot be missed."
         },
-
         {
             picture: MickelImg,
             name: "Mickel Löfvenius",
-            instrument: "Drums",
+            instrument: "Drums, Cajón",
             info:
                 "Mickel Löfvenius is a key-member and he likes to call himseld master of logistics. His style is famous for being inoovative and awesome"
         }

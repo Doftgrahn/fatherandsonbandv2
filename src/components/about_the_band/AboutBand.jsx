@@ -1,7 +1,7 @@
 import React from "react";
 
-import Image1 from "../../assets/images/bandet1.jpg";
-import Image2 from "../../assets/images/bandet.jpg";
+import image1 from "../../assets/images/bandet1.jpg";
+import image2 from "../../assets/images/bandet.jpg";
 
 const AboutBand = ({aboutTheBand}) => {
     return (
@@ -18,12 +18,12 @@ const AboutBand = ({aboutTheBand}) => {
                 </div>
                 <div className="b-info__images">
                     <img
-                        src={Image1}
+                        src={image1}
                         alt="Father and son"
                         className="b-info__img"
                     />
                     <img
-                        src={Image2}
+                        src={image2}
                         alt="Father and son"
                         className="b-info__img"
                     />

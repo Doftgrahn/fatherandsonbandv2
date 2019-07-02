@@ -9,16 +9,17 @@
     }
 
     &__wrapper {
-        //display: flex;
-        //flex-direction: row;
-        //flex-wrap: wrap;
-        //justify-content: center;
-        //align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         max-width: 940px;
         margin: 0 auto;
     }
 
     h2 {
+        margin: 0;
         text-align: center;
         padding: $spacing-regular;
     }
@@ -26,7 +27,7 @@
     &__container {
         //background-color: $color-red;
         width: 100%;
-        padding: 0 1em;
+        padding: 10px;
         //box-shadow: 2px 2px $color-dark;
         // box-shadow: 2px 2px 4px #312d2d94;
         @media screen and (min-width: 800px) {
@@ -52,28 +53,36 @@
             //font-weight: bold;
             //display: inline-block;
             //padding: $spacing-regular;
+            text-align: center;
             margin: 0;
             padding: 10px 20px;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            align-items: center;
             @media screen and (min-width: 800px) {
+                text-align: left;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: row;
-                line-height: 1.7;
+                line-height: 1.4;
             }
 
             .info-tour {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                .location {
+                    font-weight: 800;
+                }
             }
 
             .date-tour {
-                margin-left: auto;
+                //margin-left: auto;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
@@ -84,28 +93,19 @@
             &:nth-child(odd) {
                 background-color: $color-dark;
                 color: $color-white;
+
+                a {
+                    color: $color-white;
+                }
             }
 
             &:nth-child(even) {
                 background-color: $color-white;
-            }
-            /*
-            & span {
-                text-align: left;
 
-                &:nth-child(1) {
-                    margin-right: auto;
-                }
-
-                &:nth-child(2) {
-                    text-align: left;
-                }
-
-                &:nth-child(3) {
-                    margin-left: auto;
+                a {
+                    color: $color-dark;
                 }
             }
-            */
         }
     }
 }

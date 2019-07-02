@@ -102,7 +102,7 @@ const History = ({history}) => {
                             <img src={Frolunda} alt="frolunda" />
                         </div>
                         <div className="b-history__container-info-caption">
-                            <span className="b-history__container-info-caption">
+                            <span>
                                 Simon Grahn's initial performance with the band,
                                 at Frölunda Kulturhus(2009).
                             </span>

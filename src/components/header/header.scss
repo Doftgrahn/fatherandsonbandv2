@@ -9,12 +9,14 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 20px;
+    padding: 10px 20px;
+    transition: 0.4s ease;
     background-color: $color-dark;
     @media screen and (min-width: 800px) {
         position: fixed;
         justify-content: center;
     }
+
 
     &__container {
         position: absolute;
@@ -126,4 +128,7 @@
             }
         }
     }
+}
+.big {
+    padding:0px;
 }

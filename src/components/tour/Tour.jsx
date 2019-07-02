@@ -10,7 +10,7 @@ const Tour = ({tourSlide}) => {
         const unsubscribe = userCollection.onSnapshot(snapshot => {
             const list = [];
             snapshot.forEach(doc => {
-                list.push({...doc.data(), postiD: doc.id});
+                list.push({...doc.data(), id: doc.id});
             });
             setTour(list);
         });
@@ -19,21 +19,41 @@ const Tour = ({tourSlide}) => {
 
     const tourdate = tour
         .sort((a, b) => a.date.seconds - b.date.seconds)
-        .map((e, i) => {
+        .map(e => {
+            const reg = /\d{2}:\d{2}|[AMP]+/g;
             const date = e.date.toDate().toLocaleDateString();
-            const time = e.date.toDate().toLocaleTimeString().match(/\d{2}:\d{2}|[AMP]+/g).join(' ')
+            const time = e.date
+                .toDate()
+                .toLocaleTimeString()
+                .match(reg)
+                .join(" ");
 
-            const replaceTag = (e) => {
-                if (e.info && typeof e.info === "string" && e.info.includes("://www")) {
+            const replaceTag = data => {
+                if (data.info && data.info.includes("://www")) {
                     return (
-                        <a target="_blank" rel="noopener noreferrer" href={e.info}>
-                            Link
-                        </a>
+                        <span>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={data.info}
+                            >
+                                Link
+                            </a>
+                        </span>
                     );
-                } else if (e.phone) {
-                    return <><span>{e.info}</span> <a href={`tel:${Number(e.phone)}`}>{e.phone}</a></>;
+                } else if (data.phone) {
+                    return (
+                        <>
+                            <span>{data.info}</span>{" "}
+                            <span>
+                                <a href={`tel:${Number(data.phone)}`}>
+                                    {data.phone}
+                                </a>
+                            </span>
+                        </>
+                    );
                 } else {
-                    return <span>{e.info}</span>;
+                    return <span>{data.info}</span>;
                 }
             };
 
@@ -42,10 +62,10 @@ const Tour = ({tourSlide}) => {
                     className={`tour-details ${
                         new Date() > new Date(e.date.toDate()) ? "past" : ""
                     }`}
-                    key={i}
+                    key={e.id}
                 >
                     <div className="info-tour">
-                        <span>{e.location}</span>
+                        <span className="location">{e.location}</span>
                         <span>{replaceTag(e)}</span>
                     </div>
                     <div className="date-tour">
