@@ -24,7 +24,10 @@ const Tour = ({tourSlide}) => {
             const date = e.date.toDate().toLocaleDateString();
             const time = e.date
                 .toDate()
-                .toLocaleTimeString()
+                .toLocaleString("en-GB", {
+                    timeZone: "Europe/Stockholm",
+                    timeZoneName: "short"
+                })
                 .match(reg)
                 .join(" ");
 
@@ -32,7 +35,10 @@ const Tour = ({tourSlide}) => {
             if (e.dateTo)
                 timeTo = e.dateTo
                     .toDate()
-                    .toLocaleTimeString()
+                    .toLocaleString("en-GB", {
+                        timeZone: "Europe/Stockholm",
+                        timeZoneName: "short"
+                    })
                     .match(reg)
                     .join(" ");
 
@@ -77,12 +83,14 @@ const Tour = ({tourSlide}) => {
                         <span>{replaceTag(e)}</span>
                     </div>
                     <div className="date-tour">
-                        {e.location === "Private Event" ? null : (
+                        {e.location === "Private Event" ? (
+                            <span>{date}</span>
+                        ) : (
                             <>
                                 <span>{date}</span>
                                 <span>
                                     {time}
-                                    {timeTo ? <> -{timeTo}</> : null}
+                                    {timeTo ? <>-{timeTo}</> : null}
                                 </span>
                             </>
                         )}

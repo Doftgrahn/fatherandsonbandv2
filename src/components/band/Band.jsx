@@ -13,7 +13,7 @@ const Band = ({bandMembers}) => {
             name: "Erik Petterson Sjöqvist",
             instrument: "Vocals, Lead guitar, Keyboard, Banjo, Harmonica, Bass",
             info:
-                "Piano lessons from age 4, guitar instruction from age 10, 7 years of music and middle and high school, a year of musical-theater studies, voice courses at the Complete Vocal Institute in Copenhagen, and an intense course in music production. Erik has devoted his life to music. "
+                "Piano lessons from age 4, guitar instruction from age 10, 7 years of music classes at middle and high school, a year of musical-theater studies, voice courses at the Complete Vocal Institute in Copenhagen, and an intense course in music production. Erik has devoted his life to music. "
         },
         {
             picture: JimmyImg,

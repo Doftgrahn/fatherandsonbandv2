@@ -8,23 +8,28 @@ import {ReactComponent as HeaderLogo} from "../../assets/logo-header.svg";
 class Header extends Component {
     state = {
         toggle: false,
-        class: ""
+        prevScrollpos: window.pageYOffset,
+        visible: true
     };
 
     componentDidMount() {
-        window.addEventListener("scroll", this.listenScrollEvent);
+        window.addEventListener("scroll", this.handleScroll);
     }
 
     componentWillUnmount() {
-        window.removeEventListener("scroll", this.listenScrollEvent);
+        window.removeEventListener("scroll", this.handleScroll);
     }
 
-    listenScrollEvent = () => {
-        if (window.scrollY > 100) {
-            this.setState({class: "big"});
-        } else {
-            this.setState({class: ""});
-        }
+    handleScroll = () => {
+        const {prevScrollpos} = this.state;
+
+        const currentScrollPos = window.pageYOffset;
+        const visible = prevScrollpos > currentScrollPos;
+
+        this.setState({
+            prevScrollpos: currentScrollPos,
+            visible
+        });
     };
 
     toggleState = () => {
@@ -35,24 +40,17 @@ class Header extends Component {
     toggleOff = () => {
         this.setState({toggle: false});
     };
+
     slideToHomeLogo = () => {
         this.toggleOff();
         this.props.slideToHome();
     };
 
     render() {
-        let {toggle} = this.state;
-        let {
-            slidetoAboutBand,
-            slideToHome,
-            slideToMembers,
-            slideToHistory,
-            slideToTour,
-            slideToGallery,
-            slideToFooter
-        } = this.props;
+        let {toggle, visible} = this.state;
+
         return (
-            <header className={`b-header ${this.state.class}`}>
+            <header className={`b-header ${visible ? "" : "hidden"}`}>
                 <div
                     className="b-header__logo-wrapper"
                     onClick={this.slideToHomeLogo}
@@ -60,13 +58,13 @@ class Header extends Component {
                     <HeaderLogo />
                 </div>
                 <Navbar
-                    slidetoAboutBand={slidetoAboutBand}
-                    slideToHome={slideToHome}
-                    slideToMembers={slideToMembers}
-                    slideToHistory={slideToHistory}
-                    slideToTour={slideToTour}
-                    slideToGallery={slideToGallery}
-                    slideToFooter={slideToFooter}
+                    slidetoAboutBand={this.props.slidetoAboutBand}
+                    slideToHome={this.props.slideToHome}
+                    slideToMembers={this.props.slideToMembers}
+                    slideToHistory={this.props.slideToHistory}
+                    slideToTour={this.props.slideToTour}
+                    slideToGallery={this.props.slideToGallery}
+                    slideToFooter={this.props.slideToFooter}
                     toggle={toggle}
                     toggleOff={this.toggleOff}
                 />
