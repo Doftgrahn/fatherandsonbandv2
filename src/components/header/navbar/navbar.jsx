@@ -4,6 +4,7 @@ class Navbar extends Component {
     slideToAbout = () => {
         this.props.toggleOff();
         this.props.slidetoAboutBand();
+
     };
     slideToHome = () => {
         this.props.toggleOff();
@@ -17,14 +18,19 @@ class Navbar extends Component {
         this.props.toggleOff();
         this.props.slideToHistory();
     };
-    slideToTour = () => {
-        this.props.toggleOff();
-        this.props.slideToTour();
-    };
     slideToGallery = () => {
         this.props.toggleOff();
         this.props.slideToGallery();
     };
+    slideToMedia = () => {
+        this.props.toggleOff();
+        this.props.slideToMedia();
+    }
+    slideToTour = () => {
+        this.props.toggleOff();
+        this.props.slideToTour();
+    };
+
     slideToFooter = () => {
         this.props.toggleOff();
         this.props.slideToFooter();
@@ -68,16 +74,23 @@ class Navbar extends Component {
                     </li>
                     <li
                         className="b-header__container-meny-links"
-                        onClick={this.slideToTour}
-                    >
-                        Tour
-                    </li>
-                    <li
-                        className="b-header__container-meny-links"
                         onClick={this.slideToGallery}
                     >
                         Gallery
                     </li>
+                    {/*<li
+                        className="b-header__container-meny-links"
+                        onClick={this.slideToMedia}
+                    >
+                        Media
+                    </li>*/}
+                    <li
+                        className="b-header__container-meny-links"
+                        onClick={this.slideToTour}
+                    >
+                        Tour
+                    </li>
+
                     <li
                         className="b-header__container-meny-links"
                         onClick={this.slideToFooter}

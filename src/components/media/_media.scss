@@ -1,0 +1,26 @@
+.b-media {
+    background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
+    border-top: 30px solid $color-red;
+    padding: $spacing-regular 5px;
+    @media screen and (min-width: 800px) {
+        padding: 60px $spacing-regular;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 940px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        padding: $spacing-regular;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+}

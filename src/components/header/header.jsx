@@ -21,12 +21,11 @@ class Header extends Component {
     }
 
     handleScroll = () => {
-        if (window && window.pageYOffset >= 750) {
-            const {prevScrollpos} = this.state;
+        const {prevScrollpos} = this.state;
+        const currentScrollPos = window.pageYOffset;
+        const visible = prevScrollpos >= currentScrollPos;
 
-            const currentScrollPos = window.pageYOffset;
-            const visible = prevScrollpos > currentScrollPos;
-
+        if (window && currentScrollPos >= 750) {
             this.setState({
                 prevScrollpos: currentScrollPos,
                 visible
@@ -34,14 +33,9 @@ class Header extends Component {
         }
     };
 
-    toggleState = () => {
-        let {toggle} = this.state;
-        this.setState({toggle: !toggle});
-    };
+    toggleState = () => this.setState({toggle: !this.state.toggle});
 
-    toggleOff = () => {
-        this.setState({toggle: false});
-    };
+    toggleOff = () => this.setState({toggle: false});
 
     slideToHomeLogo = () => {
         this.toggleOff();
@@ -66,6 +60,7 @@ class Header extends Component {
                     slideToHistory={this.props.slideToHistory}
                     slideToTour={this.props.slideToTour}
                     slideToGallery={this.props.slideToGallery}
+                    slideToMedia={this.props.slideToMedia}
                     slideToFooter={this.props.slideToFooter}
                     toggle={toggle}
                     toggleOff={this.toggleOff}

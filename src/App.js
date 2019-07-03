@@ -18,6 +18,7 @@ const App = () => {
     const history = React.createRef();
     const tour = React.createRef();
     const gallery = React.createRef();
+    const media = React.createRef();
     const footer = React.createRef();
 
     const slideToHome = () => {
@@ -39,6 +40,10 @@ const App = () => {
     const slideToGallery = () => {
         window.scrollTo(0, gallery.current.offsetTop);
     };
+
+    const slideToMedia = () => {
+        window.scrollTo(0, media.current.offsetTop);
+    };
     const slideToFooter = () => {
         window.scrollTo(0, footer.current.offsetTop);
     };
@@ -46,21 +51,23 @@ const App = () => {
     return (
         <div className="App">
             <Router>
-            <Header
-                slideToHome={slideToHome}
-                slidetoAboutBand={slidetoAboutBand}
-                slideToMembers={slideToMembers}
-                slideToHistory={slideToHistory}
-                slideToTour={slideToTour}
-                slideToGallery={slideToGallery}
-                slideToFooter={slideToFooter}
-            />
+                <Header
+                    slideToHome={slideToHome}
+                    slidetoAboutBand={slidetoAboutBand}
+                    slideToMembers={slideToMembers}
+                    slideToHistory={slideToHistory}
+                    slideToTour={slideToTour}
+                    slideToGallery={slideToGallery}
+                    slideToMedia={slideToMedia}
+                    slideToFooter={slideToFooter}
+                />
                 <Routing
                     hero={hero}
                     aboutTheBand={aboutTheBand}
                     bandMembers={bandMembers}
                     history={history}
                     tourSlide={tour}
+                    media={media}
                     gallerySlide={gallery}
                 />
                 {/*<Main

@@ -10,7 +10,7 @@ const Hero = ({hero}) => {
                 <div className="wrapper">
                     <Logo />
                 </div>
-                <h1>Father & Son Band</h1>
+                {<h1>Father & Son Band</h1>}
                 {/*<p>Playing in G# since 1900</p>*/}
             </div>
         </div>

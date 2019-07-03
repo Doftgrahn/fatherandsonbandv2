@@ -9,9 +9,10 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0px;
+    padding: 0;
     transition: 0.5s ease;
     background-color: $color-dark;
+    padding: 10px;
     @media screen and (min-width: 800px) {
         position: fixed;
         justify-content: center;
@@ -130,8 +131,7 @@
 }
 
 .hidden {
-    top:-80px;
-    padding: 0px;
+    top: -80px;
+    padding: 0;
     position: fixed;
-
 }

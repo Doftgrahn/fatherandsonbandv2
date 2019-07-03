@@ -28,9 +28,13 @@
         }
 
         p {
+            text-align: justify;
             font-size: 18px;
             line-height: 160%;
             text-indent: 20px;
+            @media screen and (min-width: 800px) {
+                text-align: justify;
+            }
         }
     }
 

@@ -12,7 +12,8 @@ const Routing = ({
     bandMembers,
     history,
     tourSlide,
-    gallerySlide
+    gallerySlide,
+    media
 }) => {
     return (
         <Switch>
@@ -27,6 +28,7 @@ const Routing = ({
                         history={history}
                         tourSlide={tourSlide}
                         gallerySlide={gallerySlide}
+                        media={media}
                     />
                 )}
             />
@@ -40,6 +42,7 @@ const Routing = ({
                         history={history}
                         tourSlide={tourSlide}
                         gallerySlide={gallerySlide}
+                        media={media}
                     />
                 )}
             />

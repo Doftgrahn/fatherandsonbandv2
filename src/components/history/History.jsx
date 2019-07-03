@@ -121,7 +121,7 @@ const History = ({history}) => {
                         Meanwhile, Erik was studying music production home in
                         Sweden. In 2017, Elie became a father and had to leave
                         the band. For the next two summers, he was replaced by
-                        Simon Ericson on lead guitar. In the summer of 2018, the
+                        Simon Ericsson on lead guitar. In the summer of 2018, the
                         band released their second CD—Rockin’, Rollin’, &
                         Ramblin,’ entirely produced by Erik in his home studio.
                         Erik also spent intensive hours practicing lead guitar.

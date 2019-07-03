@@ -4,6 +4,7 @@ import AboutBand from "./about_the_band/AboutBand";
 import Band from "./band/Band";
 import History from "./history/History";
 import Tour from "./tour/Tour";
+//import Media from "./media/Media";
 import Gallery from "./gallery/Gallery";
 
 const Main = ({
@@ -12,7 +13,8 @@ const Main = ({
     bandMembers,
     history,
     tourSlide,
-    gallerySlide
+    gallerySlide,
+    media
 }) => {
     return (
         <div className="App">
@@ -21,6 +23,7 @@ const Main = ({
             <Band bandMembers={bandMembers} />
             <History history={history} />
             <Gallery gallerySlide={gallerySlide} />
+            {/*<Media media={media} />*/}
             <Tour tourSlide={tourSlide} />
         </div>
     );
