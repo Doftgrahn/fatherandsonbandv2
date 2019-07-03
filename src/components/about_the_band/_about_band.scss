@@ -1,61 +1,64 @@
 .b-info {
-  background: $color-light;
-  background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
-  border-top: 30px solid $color-red;
+    background: $color-light;
+    background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
+    border-top: 30px solid $color-red;
 
-  &__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 40px $spacing-regular;
-    max-width: $width-content;
-    margin: 0 auto;
-    @media screen and (min-width: 800px) {
-      padding: 60px $spacing-regular;
-    }
-  }
-  &__container {
-    width: 100%;
-    @media screen and (min-width: 800px) {
-      width: 45%;
-    }
-
-    h2 {
-      margin-bottom: 0;
-    }
-    p {
-      line-height: 160%;
-
-    }
-  }
-
-  &__images {
-
-    position: relative;
-    z-index: 0;
-    width: 100%;
-    padding-top: 20px;
-    @media screen and (min-width: 800px) {
-      width: 55%;
-      padding: 40px;
-    }
-    img {
-      border:10px solid $color-red;
-      z-index: -1;
-      width: 60%;
-       // padding-bottom: 80px;
-      &:last-child {
-        width: 55%;
-        position: absolute;
-        bottom: 0px;
-        right: 0;
-        padding-bottom: 0;
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 40px $spacing-regular;
+        max-width: $width-content;
+        margin: 0 auto;
         @media screen and (min-width: 800px) {
-          width: 50%;
+            padding: 60px $spacing-regular;
         }
-      }
     }
-  }
+
+    &__container {
+        width: 100%;
+        @media screen and (min-width: 800px) {
+            width: 45%;
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 160%;
+            text-indent: 20px;
+        }
+    }
+
+    &__images {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        padding-top: 20px;
+        @media screen and (min-width: 800px) {
+            width: 55%;
+            padding: 40px;
+        }
+
+        img {
+            border: 10px solid $color-red;
+            z-index: -1;
+            width: 60%;
+            // padding-bottom: 80px;
+            &:last-child {
+                width: 55%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding-bottom: 0;
+                @media screen and (min-width: 800px) {
+                    width: 50%;
+                }
+            }
+        }
+    }
 }

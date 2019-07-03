@@ -18,7 +18,7 @@ const History = ({history}) => {
                         in Gothenburg, Sweden. Seven years and thousands of
                         hours of music later, they both had graduated from high
                         school, and Erik’s father, Jimmy, came up with a
-                        suggestion. “it’s time to get some real world
+                        suggestion. “It’s time to get some real world
                         experience. . . take all you have learned in the
                         classroom, the school choir, and your private lessons
                         and take the show on the road.”
@@ -35,7 +35,7 @@ const History = ({history}) => {
                         </div>
                     </div>
                     <p>
-                        Jimmy organized a 15-country, 2-month tour through
+                        Jimmy organized a 15-country, two-month tour through
                         Europe that included 20 bona fide gigs and 40 days of
                         street-singing, and in June 2009, the trio began living
                         the vagabond life of traveling minstrels in earnest.
@@ -59,14 +59,14 @@ const History = ({history}) => {
                         </div>
                     </div>
                     <p>
-                        You have to do something special to attract their
+                        "You have to do something special to attract their
                         attention and get them to stop, listen, and throw a few
                         coins into your guitar case. I spent a good part of 10
                         summers playing the streets in the seventies and
                         eighties, and it was so much fun to get back to the
                         street-music scene with Erik and Elie in 2009. They
                         learned a lot, and I think you can see a product of
-                        their street skills in the way they perform today.
+                        their street skills in the way they perform today.”
                     </p>
                     <div className="b-history__container-info">
                         <div className="b-history__container-info-img">
@@ -78,9 +78,9 @@ const History = ({history}) => {
                         </div>
                         <div className="b-history__container-info-caption">
                             <span>
-                                Street-singing often has it's drawbacks...like
-                                the police. The Venice performance did not last
-                                long.
+                                Street-singing often has it's drawbacks. . .
+                                like the police. The Venice performance did not
+                                last long.
                             </span>
                         </div>
                     </div>
@@ -92,7 +92,7 @@ const History = ({history}) => {
                         Friday, Sept. 9, the trio inaugurated a history of rock
                         ‘n’ roll show, which they have been performing on and
                         off ever since. During that show, they asked saxophonist
-                        and singer, Simon Grahnn if he would join them on stage
+                        and singer, Simon Grahn, if he would join them on stage
                         as a guest artist for a few numbers. For a couple of
                         summers, Simon continued to be a guest artist on the
                         band’s summer tour in Austria, and soon he was an

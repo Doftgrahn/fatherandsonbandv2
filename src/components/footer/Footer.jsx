@@ -35,7 +35,7 @@ const Footer = ({footer}) => {
       </div>
 
       <div className="b-footer__content-creator">
-      <p>Made by SimonGrahn</p>
+      <p>Made by Simon Grahn</p>
       <a href="mailto:Simon.grahn@gmail.com">Contact me</a>
       </div>
 

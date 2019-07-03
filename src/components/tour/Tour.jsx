@@ -21,7 +21,8 @@ const Tour = ({tourSlide}) => {
         .sort((a, b) => a.date.seconds - b.date.seconds)
         .map(e => {
             const reg = /\d{2}:\d{2}|[AMP]+/g;
-            const date = e.date.toDate().toLocaleDateString();
+            const options = {day: "numeric", month: "short"};
+            const date = e.date.toDate().toLocaleDateString("en-GB", options);
             const time = e.date
                 .toDate()
                 .toLocaleString("en-GB", {
@@ -76,7 +77,7 @@ const Tour = ({tourSlide}) => {
                     className={`tour-details ${
                         new Date() > new Date(e.date.toDate()) ? "past" : ""
                     }`}
-                    key={e.id}
+                    key={`key:${e.id}`}
                 >
                     <div className="info-tour">
                         <span className="location">{e.location}</span>

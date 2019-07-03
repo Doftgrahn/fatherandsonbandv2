@@ -21,15 +21,17 @@ class Header extends Component {
     }
 
     handleScroll = () => {
-        const {prevScrollpos} = this.state;
+        if (window && window.pageYOffset >= 750) {
+            const {prevScrollpos} = this.state;
 
-        const currentScrollPos = window.pageYOffset;
-        const visible = prevScrollpos > currentScrollPos;
+            const currentScrollPos = window.pageYOffset;
+            const visible = prevScrollpos > currentScrollPos;
 
-        this.setState({
-            prevScrollpos: currentScrollPos,
-            visible
-        });
+            this.setState({
+                prevScrollpos: currentScrollPos,
+                visible
+            });
+        }
     };
 
     toggleState = () => {

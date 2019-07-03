@@ -20,8 +20,8 @@ const Main = ({
             <AboutBand aboutTheBand={aboutTheBand} />
             <Band bandMembers={bandMembers} />
             <History history={history} />
-            <Tour tourSlide={tourSlide} />
             <Gallery gallerySlide={gallerySlide} />
+            <Tour tourSlide={tourSlide} />
         </div>
     );
 };
