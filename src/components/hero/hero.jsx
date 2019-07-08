@@ -3,8 +3,26 @@ import {ReactComponent as Logo} from "../../assets/logo.svg";
 import Image from "../../assets/images/hero.jpg";
 
 const Hero = ({hero}) => {
+    //const [offset, setOffSet] = useState(0);
+
+    /*
+    useEffect(() => {
+        window.addEventListener("scroll", parallaxShift);
+        return () => window.removeEventListener("scroll", parallaxShift);
+    });
+
+    const parallaxShift = () => {
+        setOffSet(window.pageYOffset);
+    };
+    */
+    /*
+    const styles = {
+       bottom: `${offset}%`
+   };
+   */
+
     return (
-        <div ref={hero} className="b-hero" id="home">
+        <div ref={hero} className="b-hero">
             <img src={Image} alt="Father and son" className="b-hero__image" />
             <div className="b-hero__content">
                 <div className="wrapper">

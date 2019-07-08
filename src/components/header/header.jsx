@@ -39,11 +39,12 @@ class Header extends Component {
 
     slideToHomeLogo = () => {
         this.toggleOff();
-        this.props.slideToHome();
+        this.props.slideTo(this.props.refs.hero);
     };
 
     render() {
-        let {toggle, visible} = this.state;
+        const {toggle, visible} = this.state;
+        const {refs, slideTo} = this.props;
 
         return (
             <header className={`b-header ${visible ? "" : "hidden"}`}>
@@ -54,14 +55,8 @@ class Header extends Component {
                     <HeaderLogo />
                 </div>
                 <Navbar
-                    slidetoAboutBand={this.props.slidetoAboutBand}
-                    slideToHome={this.props.slideToHome}
-                    slideToMembers={this.props.slideToMembers}
-                    slideToHistory={this.props.slideToHistory}
-                    slideToTour={this.props.slideToTour}
-                    slideToGallery={this.props.slideToGallery}
-                    slideToMedia={this.props.slideToMedia}
-                    slideToFooter={this.props.slideToFooter}
+                    refs={refs}
+                    slideTo={slideTo}
                     toggle={toggle}
                     toggleOff={this.toggleOff}
                 />

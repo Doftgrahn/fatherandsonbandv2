@@ -7,7 +7,7 @@ import VenicePolice from "../../assets/historyImg/IMG_8491.jpg";
 
 const History = ({history}) => {
     return (
-        <section ref={history} className="b-history" id="history">
+        <section ref={history} className="b-history">
             <div className="b-history__wrapper">
                 <h2>History of the father & son band</h2>
                 <div className="b-history__container">

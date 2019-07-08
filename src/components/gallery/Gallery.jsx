@@ -39,7 +39,7 @@ const Gallery = ({gallerySlide}) => {
     ));
 
     return (
-        <section ref={gallerySlide} className="b-gallery" id="gallery">
+        <section ref={gallerySlide} className="b-gallery">
             <div className="b-gallery__wrapper ">
                 <h2>Gallery</h2>
                 <Carousel>{pictures}</Carousel>

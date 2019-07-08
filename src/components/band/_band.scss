@@ -39,6 +39,10 @@
             object-fit: cover;
             width: 100%;
             filter:grayscale(1);
+            //transition: 0.4s;
+            &:hover {
+                //filter:grayscale(0.4);
+            }
         }
 
         &-info {

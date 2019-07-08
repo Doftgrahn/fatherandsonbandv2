@@ -101,7 +101,7 @@ const Tour = ({tourSlide}) => {
         });
 
     return (
-        <section ref={tourSlide} className="b-tour" id="tour">
+        <section ref={tourSlide} className="b-tour">
             <div className="b-tour__wrapper">
                 <h2>Summer Tour 2019</h2>
                 <div className="b-tour__container">

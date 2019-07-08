@@ -6,15 +6,7 @@ import Main from "../components/Main";
 //import Press from "../components/Press";
 //import Love from "../components/Love";
 
-const Routing = ({
-    hero,
-    aboutTheBand,
-    bandMembers,
-    history,
-    tourSlide,
-    gallerySlide,
-    media
-}) => {
+const Routing = ({refs}) => {
     return (
         <Switch>
             <Route
@@ -22,13 +14,13 @@ const Routing = ({
                 path="/"
                 render={() => (
                     <Main
-                        hero={hero}
-                        aboutTheBand={aboutTheBand}
-                        bandMembers={bandMembers}
-                        history={history}
-                        tourSlide={tourSlide}
-                        gallerySlide={gallerySlide}
-                        media={media}
+                        hero={refs.hero}
+                        aboutTheBand={refs.aboutTheBand}
+                        bandMembers={refs.bandMembers}
+                        history={refs.history}
+                        tourSlide={refs.tour}
+                        media={refs.media}
+                        gallerySlide={refs.gallery}
                     />
                 )}
             />
@@ -36,13 +28,13 @@ const Routing = ({
                 path="**"
                 render={() => (
                     <Main
-                        hero={hero}
-                        aboutTheBand={aboutTheBand}
-                        bandMembers={bandMembers}
-                        history={history}
-                        tourSlide={tourSlide}
-                        gallerySlide={gallerySlide}
-                        media={media}
+                        hero={refs.hero}
+                        aboutTheBand={refs.aboutTheBand}
+                        bandMembers={refs.bandMembers}
+                        history={refs.history}
+                        tourSlide={refs.tour}
+                        media={refs.media}
+                        gallerySlide={refs.gallery}
                     />
                 )}
             />
@@ -53,12 +45,3 @@ const Routing = ({
 };
 
 export default Routing;
-
-/*
-hero={hero}
-aboutTheBand={aboutTheBand}
-bandMembers={bandMembers}
-history={history}
-tourSlide={tour}
-gallerySlide={gallery}
-*/

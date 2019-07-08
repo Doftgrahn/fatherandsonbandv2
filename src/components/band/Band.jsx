@@ -41,7 +41,7 @@ const Band = ({bandMembers}) => {
             name: "Mickel Löfvenius",
             instrument: "Drums & Cajón",
             info:
-                "Mickel Löfvenius is a key-member and he likes to call himseld master of logistics. His style is famous for being inoovative and awesome"
+                "Drummer, skier, sailor, carpenter, and lover, Mickel Löfvenius holds many skill sets. He grew up in the deep forest of northern Sweden. Rumor has it that he was raised by wild animals."
         }
     ]);
 

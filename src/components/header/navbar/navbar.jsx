@@ -1,44 +1,35 @@
 import React, {Component} from "react";
 
 class Navbar extends Component {
-    slideToAbout = () => {
-        this.props.toggleOff();
-        this.props.slidetoAboutBand();
-
-    };
-    slideToHome = () => {
-        this.props.toggleOff();
-        this.props.slideToHome();
-    };
-    slideToMembers = () => {
-        this.props.toggleOff();
-        this.props.slideToMembers();
-    };
-    slideToHistory = () => {
-        this.props.toggleOff();
-        this.props.slideToHistory();
-    };
-    slideToGallery = () => {
-        this.props.toggleOff();
-        this.props.slideToGallery();
-    };
-    slideToMedia = () => {
-        this.props.toggleOff();
-        this.props.slideToMedia();
-    }
-    slideToTour = () => {
-        this.props.toggleOff();
-        this.props.slideToTour();
+    state = {
+        refs: [
+            {name: "Home", ref: this.props.refs.hero},
+            {name: "About", ref: this.props.refs.aboutTheBand},
+            {name: "Members", ref: this.props.refs.bandMembers},
+            {name: "History", ref: this.props.refs.history},
+            {name: "Gallery", ref: this.props.refs.gallery},
+            {name: "Tour", ref: this.props.refs.tour},
+            {name: "Contact", ref: this.props.refs.footer}
+        ]
     };
 
-    slideToFooter = () => {
+    slideTo = ref => {
         this.props.toggleOff();
-        this.props.slideToFooter();
+        this.props.slideTo(ref);
     };
+
+    navBar = this.state.refs.map((link, i) => (
+        <li
+            key={i}
+            className="b-header__container-meny-links"
+            onClick={() => this.slideTo(link.ref)}
+        >
+            {link.name}
+        </li>
+    ));
 
     render() {
         let {toggle, toggleOff} = this.props;
-
         return (
             <div
                 className={
@@ -47,56 +38,7 @@ class Navbar extends Component {
                 }
             >
                 <ul className="b-header__container-meny">
-                    <li
-                        className="b-header__container-meny-links"
-                        onClick={this.slideToHome}
-                    >
-                        {" "}
-                        Home
-                    </li>
-                    <li
-                        className="b-header__container-meny-links"
-                        onClick={this.slideToAbout}
-                    >
-                        About
-                    </li>
-                    <li
-                        className="b-header__container-meny-links"
-                        onClick={this.slideToMembers}
-                    >
-                        Members
-                    </li>
-                    <li
-                        className="b-header__container-meny-links"
-                        onClick={this.slideToHistory}
-                    >
-                        History
-                    </li>
-                    <li
-                        className="b-header__container-meny-links"
-                        onClick={this.slideToGallery}
-                    >
-                        Gallery
-                    </li>
-                    {/*<li
-                        className="b-header__container-meny-links"
-                        onClick={this.slideToMedia}
-                    >
-                        Media
-                    </li>*/}
-                    <li
-                        className="b-header__container-meny-links"
-                        onClick={this.slideToTour}
-                    >
-                        Tour
-                    </li>
-
-                    <li
-                        className="b-header__container-meny-links"
-                        onClick={this.slideToFooter}
-                    >
-                        Contact
-                    </li>
+                    {this.navBar}
                     <li className="b-header__container-meny-links">
                         <a
                             className="b-header__container-meny-links"

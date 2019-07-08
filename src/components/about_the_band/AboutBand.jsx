@@ -9,7 +9,7 @@ const AboutBand = ({aboutTheBand}) => {
     //const showText = () => setShowMore(!showMore);
 
     return (
-        <section ref={aboutTheBand} className="b-info" id="about">
+        <section ref={aboutTheBand} className="b-info">
             <div className="b-info__wrapper">
                 <div className="b-info__container">
                     <h2>About the band</h2>
@@ -30,7 +30,7 @@ const AboutBand = ({aboutTheBand}) => {
                         the 1950s, 1960s, and 1970s.
                     </p>
 
-                    {/* <p>
+                    <p>
                         Often, they perform a History of Rock ‘n’ Roll show,
                         which is divided into two halves with an intermission.
                         The first set sees the band enter the stage with ’50s
@@ -38,15 +38,13 @@ const AboutBand = ({aboutTheBand}) => {
                         Buddy Holly, Bill Haley, Sam Cooke, the Drifters, Ben E.
                         King, Dion and the Belmonts, Johnny Cash, the Beachboys,
                         and other icons of the period. Following an
-                        intermission, the group retx    urns in hippy/flower-power
+                        intermission, the group retx urns in hippy/flower-power
                         garb and continues their version of rock history with
                         songs by Bob Dylan, Simon and Garfunkel, the Beatles,
                         the Rolling Stones, Dr. Hook, John Denver, Creedence
                         Clearwater Revival, Jimi Hendrix, and many more of the
                         top acts of the ’60s and ’70s.
                     </p>
-
-                    */}
                 </div>
                 <div className="b-info__images">
                     <img
