@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+//import Fade from "react-reveal/Fade";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from "react-responsive-carousel";
@@ -17,7 +18,7 @@ import ErikSing from "../../assets/images/gallery/erikSing.jpg";
 
 /*import NachBar from "../../assets/images/gallery/nachbar.jpg";*/
 
-const Gallery = ({gallerySlide}) => {
+const Gallery = () => {
     const [gallery] = useState([
         Ovation,
         Crowd,
@@ -32,17 +33,26 @@ const Gallery = ({gallerySlide}) => {
         ErikSing
     ]);
 
-    const pictures = gallery.map((pic, i) => (
-        <div className="b-gallery__container-img" key={i}>
-            <img src={pic} alt="GalleryPictures" />
-        </div>
-    ));
+    const pictures = gallery.map(
+        (pic, i) => (
+            <div className="b-gallery__container-img" key={i}>
+                <img src={pic} alt="GalleryPictures" />
+            </div>
+        ),
+        []
+    );
 
     return (
-        <section ref={gallerySlide} className="b-gallery">
+        <section className="b-gallery" id="gallery">
             <div className="b-gallery__wrapper ">
                 <h2>Gallery</h2>
-                <Carousel>{pictures}</Carousel>
+                <Carousel
+                    infiniteLoop={true}
+                    useKeyboardArrows={true}
+                    swipeable={true}
+                >
+                    {pictures}
+                </Carousel>
             </div>
         </section>
     );

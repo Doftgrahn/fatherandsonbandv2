@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Fade from "react-reveal/Fade";
 
 import JimmyImg from "../../assets/images/jimmyBehindBack.jpg";
 import ErikImg from "../../assets/images/PhotoErik.jpg";
@@ -6,7 +7,7 @@ import ViktorImg from "../../assets/images/viktor.jpg";
 import SimonImg from "../../assets/images/simonSax.jpg";
 import MickelImg from "../../assets/images/MickeNew.jpg";
 
-const Band = ({bandMembers}) => {
+const Band = () => {
     const [band] = useState([
         {
             picture: ErikImg,
@@ -61,9 +62,13 @@ const Band = ({bandMembers}) => {
     ));
 
     return (
-        <section ref={bandMembers} className="b-band">
-            <h2 className="">Members</h2>
-            <div className="b-band__container">{renderBand}</div>
+        <section className="b-band" id="members">
+            <Fade cascade duration={500}>
+                <div>
+                    <h2>Members</h2>
+                    <div className="b-band__container">{renderBand}</div>
+                </div>
+            </Fade>
         </section>
     );
 };

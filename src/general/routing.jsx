@@ -3,45 +3,29 @@ import React from "react";
 import {Switch, Route} from "react-router-dom";
 
 import Main from "../components/Main";
-//import Press from "../components/Press";
-//import Love from "../components/Love";
+import Press from "../components/press/Press";
+import Contact from "../components/contact/Contact";
+import References from "../components/references/References";
 
-const Routing = ({refs}) => {
-    return (
-        <Switch>
-            <Route
-                exact={true}
-                path="/"
-                render={() => (
-                    <Main
-                        hero={refs.hero}
-                        aboutTheBand={refs.aboutTheBand}
-                        bandMembers={refs.bandMembers}
-                        history={refs.history}
-                        tourSlide={refs.tour}
-                        media={refs.media}
-                        gallerySlide={refs.gallery}
-                    />
-                )}
-            />
-            <Route
-                path="**"
-                render={() => (
-                    <Main
-                        hero={refs.hero}
-                        aboutTheBand={refs.aboutTheBand}
-                        bandMembers={refs.bandMembers}
-                        history={refs.history}
-                        tourSlide={refs.tour}
-                        media={refs.media}
-                        gallerySlide={refs.gallery}
-                    />
-                )}
-            />
-            {/*<Route path="/press" component={Press} />
-            <Route path="/love" component={Love} />*/}
-        </Switch>
-    );
+const Routing = () => {
+    const routing = [
+        {path: "/", exact: true, component: Main},
+        {path: "/press", exact: false, component: Press},
+        {path: "/contact", exact: false, component: Contact},
+        {path: "/references", exact: false, component: References},
+        {path: "**", exact: true, component: Main}
+    ];
+
+    const routeAll = routing.map((route, i) => (
+        <Route
+            key={i}
+            path={route.path}
+            exact={route.exact}
+            component={route.component}
+        />
+    ));
+
+    return <Switch>{routeAll}</Switch>;
 };
 
 export default Routing;

@@ -2,7 +2,7 @@ import React from "react";
 import {ReactComponent as Logo} from "../../assets/logo.svg";
 import Image from "../../assets/images/hero.jpg";
 
-const Hero = ({hero}) => {
+const Hero = () => {
     //const [offset, setOffSet] = useState(0);
 
     /*
@@ -22,7 +22,7 @@ const Hero = ({hero}) => {
    */
 
     return (
-        <div ref={hero} className="b-hero">
+        <div className="b-hero" id="hero">
             <img src={Image} alt="Father and son" className="b-hero__image" />
             <div className="b-hero__content">
                 <div className="wrapper">

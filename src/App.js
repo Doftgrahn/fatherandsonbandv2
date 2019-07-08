@@ -19,17 +19,15 @@ const App = () => {
         footer: React.createRef()
     };
 
-    const slideTo = element => {
-        window.scrollTo(0, element.current.offsetTop);console.log(element);
-    };
+    const slideTo = element => window.scrollTo(0, element.current.offsetTop);
 
     return (
         <div className="App">
             <Router>
                 <Header slideTo={slideTo} refs={refs} />
                 <Routing refs={refs} />
+                <Footer footer={refs.footer} />
             </Router>
-            <Footer footer={refs.footer} />
         </div>
     );
 };

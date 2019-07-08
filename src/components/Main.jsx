@@ -7,24 +7,16 @@ import Tour from "./tour/Tour";
 //import Media from "./media/Media";
 import Gallery from "./gallery/Gallery";
 
-const Main = ({
-    hero,
-    aboutTheBand,
-    bandMembers,
-    history,
-    tourSlide,
-    gallerySlide,
-    media
-}) => {
+const Main = () => {
     return (
         <div className="App">
-            <Hero hero={hero} />
-            <AboutBand aboutTheBand={aboutTheBand} />
-            <Band bandMembers={bandMembers} />
-            <History history={history} />
-            <Gallery gallerySlide={gallerySlide} />
-            {/*<Media media={media} />*/}
-            <Tour tourSlide={tourSlide} />
+            <Hero />
+            <AboutBand />
+            <Band />
+            <History />
+            <Gallery />
+            {/*<Media />*/}
+            <Tour />
         </div>
     );
 };

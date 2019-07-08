@@ -1,8 +1,8 @@
 import React from "react";
 
-const Media = ({media}) => {
+const Media = () => {
     return (
-        <section ref={media} className="b-media">
+        <section  className="b-media" id="media">
             <div className="b-media__wrapper">
                 <h2>Media</h2>
                 <div className="b-media__container">

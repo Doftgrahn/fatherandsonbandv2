@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
+import Fade from "react-reveal/Fade";
 
 import {database} from "../../general/firestoreconfig";
 
-const Tour = ({tourSlide}) => {
+const Tour = () => {
     const [tour, setTour] = useState([]);
 
     useEffect(() => {
@@ -101,13 +102,15 @@ const Tour = ({tourSlide}) => {
         });
 
     return (
-        <section ref={tourSlide} className="b-tour">
-            <div className="b-tour__wrapper">
-                <h2>Summer Tour 2019</h2>
-                <div className="b-tour__container">
-                    <div className="b-tour__dates">{tourdate}</div>
+        <section className="b-tour" id="tour">
+            <Fade cascade duration={500}>
+                <div className="b-tour__wrapper">
+                    <h2>Summer Tour 2019</h2>
+                    <div className="b-tour__container">
+                        <div className="b-tour__dates">{tourdate}</div>
+                    </div>
                 </div>
-            </div>
+            </Fade>
         </section>
     );
 };

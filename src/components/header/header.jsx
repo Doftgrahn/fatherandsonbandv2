@@ -2,14 +2,14 @@ import React, {Component} from "react";
 
 import Navbar from "./navbar/navbar";
 import Hamburger from "./hamburger/hamburger";
+import {HashLink as Link} from "react-router-hash-link";
 
 import {ReactComponent as HeaderLogo} from "../../assets/logo-header.svg";
 
 class Header extends Component {
     state = {
         toggle: false,
-        prevScrollpos: window.pageYOffset,
-        visible: true
+        class: ""
     };
 
     componentDidMount() {
@@ -21,45 +21,35 @@ class Header extends Component {
     }
 
     handleScroll = () => {
-        const {prevScrollpos} = this.state;
+        //const {prevScrollpos} = this.state;
         const currentScrollPos = window.pageYOffset;
-        const visible = prevScrollpos >= currentScrollPos;
+        //const visible = prevScrollpos >= currentScrollPos;
 
-        if (window && currentScrollPos >= 750) {
+        if (window && currentScrollPos >= 420) {
             this.setState({
-                prevScrollpos: currentScrollPos,
-                visible
+                class: "small"
             });
+        } else {
+            this.setState({class: ""});
         }
     };
 
     toggleState = () => this.setState({toggle: !this.state.toggle});
 
     toggleOff = () => this.setState({toggle: false});
-
-    slideToHomeLogo = () => {
-        this.toggleOff();
-        this.props.slideTo(this.props.refs.hero);
-    };
+    slideToHomeLogo = () => this.toggleOff();
 
     render() {
-        const {toggle, visible} = this.state;
-        const {refs, slideTo} = this.props;
+        const {toggle} = this.state;
 
         return (
-            <header className={`b-header ${visible ? "" : "hidden"}`}>
-                <div
-                    className="b-header__logo-wrapper"
-                    onClick={this.slideToHomeLogo}
-                >
-                    <HeaderLogo />
+            <header className={`b-header ${this.state.class}`}>
+                <div className="b-header__logo-wrapper">
+                    <Link to="/home#hero">
+                        <HeaderLogo />
+                    </Link>
                 </div>
-                <Navbar
-                    refs={refs}
-                    slideTo={slideTo}
-                    toggle={toggle}
-                    toggleOff={this.toggleOff}
-                />
+                <Navbar toggle={toggle} toggleOff={this.toggleOff} />
                 <Hamburger toggle={toggle} toggleState={this.toggleState} />
             </header>
         );
@@ -67,3 +57,5 @@ class Header extends Component {
 }
 
 export default Header;
+
+//{/*<header className={`b-header ${visible ? "" : "hidden"}`}>*/}

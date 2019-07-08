@@ -1,30 +1,29 @@
 import React, {Component} from "react";
+import {HashLink as Link} from "react-router-hash-link";
 
 class Navbar extends Component {
     state = {
         refs: [
-            {name: "Home", ref: this.props.refs.hero},
-            {name: "About", ref: this.props.refs.aboutTheBand},
-            {name: "Members", ref: this.props.refs.bandMembers},
-            {name: "History", ref: this.props.refs.history},
-            {name: "Gallery", ref: this.props.refs.gallery},
-            {name: "Tour", ref: this.props.refs.tour},
-            {name: "Contact", ref: this.props.refs.footer}
+            {name: "Home", ref: "/home#hero"},
+            {name: "About", ref: "home/#about"},
+            {name: "Members", ref: "/home/#members"},
+            {name: "History", ref: "/home#history"},
+            {name: "Gallery", ref: "/home#gallery"},
+            {name: "Tour", ref: "/home#tour"},
+            {name: "Contact", ref: "/contact#contact"},
+            {name: "Press", ref: "/press#press"}
         ]
-    };
-
-    slideTo = ref => {
-        this.props.toggleOff();
-        this.props.slideTo(ref);
     };
 
     navBar = this.state.refs.map((link, i) => (
         <li
             key={i}
             className="b-header__container-meny-links"
-            onClick={() => this.slideTo(link.ref)}
+            onClick={this.props.toggleOff}
         >
-            {link.name}
+            <Link className="b-header__container-meny-links" to={link.ref}>
+                {link.name}
+            </Link>
         </li>
     ));
 

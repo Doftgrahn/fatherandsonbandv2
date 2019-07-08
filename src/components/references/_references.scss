@@ -1,0 +1,32 @@
+.b-references {
+    min-height: 100vh;
+    //border-top: 30px solid $color-red;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: $spacing-regular 5px;
+    //background-color: $color-light;
+    //background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
+    background-image: url("./assets/images/texture.jpg");
+    @media screen and (min-width: 800px) {
+        padding: 60px $spacing-regular;
+        justify-content: flex-start;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        //justify-content: center;
+        //margin-top: 50px;
+        width: 100%;
+        max-width: 940px;
+    }
+
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
