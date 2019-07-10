@@ -1,13 +1,26 @@
 import React from "react";
 
+import Fade from "react-reveal/Fade";
+
 const References = () => {
     return (
         <section className="b-references" id="references">
-            <div className="b-references__wrapper">
-                <h2>Thank you for helping out</h2>
-                <h3>Here some people that really helped us along the way!</h3>
-                <p>yäy</p>
-            </div>
+            <Fade cascade duration={300}>
+                <div className="b-references__wrapper">
+                    <h2>Thank you for helping out</h2>
+                    <div className="b-references__container">
+                        <div className="b-references__container-people">
+                            <h3>
+                                Here are some people that really helped us along
+                                the way!
+                            </h3>
+                            <div className="b-references__container-info">
+                                <p>Mr Capo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Fade>
         </section>
     );
 };

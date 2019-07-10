@@ -48,27 +48,27 @@ const Band = () => {
 
     const renderBand = band.map((member, i) => (
         <div key={i} className="b-band__member">
-            <img
-                src={member.picture}
-                className="b-band__member-img"
-                alt={`Bandmember: ${member.name}`}
-            />
-            <div className="b-band__member-info">
-                <h3>{member.name}</h3>
-                <p className="b-band__member-instrument">{member.instrument}</p>
-                <p>{member.info}</p>
-            </div>
+            <Fade cascade duration={300}>
+                <img
+                    src={member.picture}
+                    className="b-band__member-img"
+                    alt={`Bandmember: ${member.name}`}
+                />
+                <div className="b-band__member-info">
+                    <h3>{member.name}</h3>
+                    <p className="b-band__member-instrument">
+                        {member.instrument}
+                    </p>
+                    <p>{member.info}</p>
+                </div>
+            </Fade>
         </div>
     ));
 
     return (
         <section className="b-band" id="members">
-            <Fade cascade duration={500}>
-                <div>
-                    <h2>Members</h2>
-                    <div className="b-band__container">{renderBand}</div>
-                </div>
-            </Fade>
+            <h2>Members</h2>
+            <div className="b-band__container">{renderBand}</div>
         </section>
     );
 };

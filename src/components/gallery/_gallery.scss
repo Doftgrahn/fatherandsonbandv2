@@ -1,6 +1,5 @@
 //@import "../../../../node_modules/swiper/dist/css/swiper.css";
 
-
 .thumbs-wrapper {
     margin: 0 auto;
 }
@@ -13,13 +12,22 @@
         //display: flex;
         //justify-content: center;
         background: $color-white;
+        //background: $color-dark;
     }
 
     .slide {
+        position: relative;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
         .legend {
-            left: 95%;
-            bottom: -0px;
             z-index: 1;
+            bottom: -0;
+            left: 95%;
         }
     }
 
@@ -30,27 +38,27 @@
 
     .control-dots {
         display: flex;
+        align-items: center;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        align-items: center;
         padding: 0;
     }
 
     .control-dots .dot {
+        width: 12px;
+        height: 12px;
+        outline: none;
         //margin: 0 auto;
         background: $color-red-light;
         box-shadow: none;
-        height: 12px;
-        width: 12px;
-        outline: none;
     }
 
     .carousel-status {
-        padding: 0 20px;
-        text-shadow: none;
-        color: $color-red-light;
         font-size: 14px;
+        padding: 0 20px;
+        color: $color-red-light;
+        text-shadow: none;
     }
 
     .control-arrow {
@@ -59,10 +67,9 @@
 }
 
 .b-gallery {
-    border-top: 30px solid $color-red;
-
-    padding: 40px $spacing-regular;
     margin: 0 auto;
+    padding: $spacing-regular 5px;
+    border-top: 30px solid $color-red;
     background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
     background-image: url("./assets/images/texture.jpg");
     @media screen and (min-width:800px) {
@@ -70,38 +77,37 @@
     }
 
     &__wrapper {
-        //display: flex;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: $width-content;
-        align-items: center;
+        //max-width: $width-content;
+        width: 100%;
+        max-width: 940px;
         margin: 0 auto;
         @media screen and (min-width: 800px) {}
     }
 
     h2 {
+        font-weight: 800;
         margin: 0;
-        letter-spacing: 2px;
-        padding: 20px;
+        padding: $spacing-regular;
         text-align: center;
+        letter-spacing: 2px;
     }
 
     &__container {
-        background-color: $color-white;
-        //max-width: 100%;
+        width: 100%;
         position: relative;
+        padding: 10px;
+        background-color: $color-white;
         @media screen and (min-width:800px) {
-            max-width: 95%;
+            //max-width: 100%;
+            padding: 0 1em;
         }
 
         &-img {
             position: relative;
             display: block;
+            overflow: hidden;
             width: 100%;
             height: 100%;
-            overflow: hidden;
             height: unset;
             object-fit: cover;
         }

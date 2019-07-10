@@ -14,28 +14,22 @@ const Tour = () => {
                 list.push({...doc.data(), id: doc.id});
             });
             setTour(list);
+            localStorage.setItem("tour", JSON.stringify(list));
         });
         return unsubscribe;
     }, []);
 
-    const tourdate = tour
-        .sort((a, b) => a.date.seconds - b.date.seconds)
-        .map(e => {
-            const reg = /\d{2}:\d{2}|[AMP]+/g;
-            const options = {day: "numeric", month: "short"};
-            const date = e.date.toDate().toLocaleDateString("en-GB", options);
-            const time = e.date
-                .toDate()
-                .toLocaleString("en-GB", {
-                    timeZone: "Europe/Stockholm",
-                    timeZoneName: "short"
-                })
-                .match(reg)
-                .join(" ");
-
-            let timeTo;
-            if (e.dateTo)
-                timeTo = e.dateTo
+    let tourdate = null;
+    if (tour)
+        tourdate = tour
+            .sort((a, b) => a.date.seconds - b.date.seconds)
+            .map(e => {
+                const reg = /\d{2}:\d{2}|[AMP]+/g;
+                const options = {day: "numeric", month: "short"};
+                const date = e.date
+                    .toDate()
+                    .toLocaleDateString("en-GB", options);
+                const time = e.date
                     .toDate()
                     .toLocaleString("en-GB", {
                         timeZone: "Europe/Stockholm",
@@ -44,66 +38,77 @@ const Tour = () => {
                     .match(reg)
                     .join(" ");
 
-            const replaceTag = data => {
-                if (data.info && data.info.includes("://www")) {
-                    return (
-                        <span>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={data.info}
-                            >
-                                Link
-                            </a>
-                        </span>
-                    );
-                } else if (data.phone) {
-                    return (
-                        <>
-                            <span>{data.info}: </span>
+                let timeTo;
+                if (e.dateTo)
+                    timeTo = e.dateTo
+                        .toDate()
+                        .toLocaleString("en-GB", {
+                            timeZone: "Europe/Stockholm",
+                            timeZoneName: "short"
+                        })
+                        .match(reg)
+                        .join(" ");
+
+                const replaceTag = data => {
+                    if (data.info && data.info.includes("://www")) {
+                        return (
                             <span>
-                                <a href={`tel:${Number(data.phone)}`}>
-                                    {data.phone}
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={data.info}
+                                >
+                                    Link
                                 </a>
                             </span>
-                        </>
-                    );
-                } else {
-                    return <span>{data.info}</span>;
-                }
-            };
-
-            return (
-                <div
-                    className={`tour-details ${
-                        new Date() > new Date(e.date.toDate()) ? "past" : ""
-                    }`}
-                    key={`key:${e.id}`}
-                >
-                    <div className="info-tour">
-                        <span className="location">{e.location}</span>
-                        <span>{replaceTag(e)}</span>
-                    </div>
-                    <div className="date-tour">
-                        {e.location === "Private Event" ? (
-                            <span>{date}</span>
-                        ) : (
+                        );
+                    } else if (data.phone) {
+                        return (
                             <>
-                                <span>{date}</span>
+                                <span>{data.info}: </span>
                                 <span>
-                                    {time}
-                                    {timeTo ? <>-{timeTo}</> : null}
+                                    <a href={`tel:${Number(data.phone)}`}>
+                                        {data.phone}
+                                    </a>
                                 </span>
                             </>
-                        )}
+                        );
+                    } else {
+                        return <span>{data.info}</span>;
+                    }
+                };
+
+                return (
+                    <div
+                        className={`tour-details ${
+                            new Date() > new Date(e.date.toDate()) ? "past" : ""
+                        }`}
+                        key={`key:${e.id}`}
+                    >
+                        <div className="info-tour">
+                            <span className="location">{e.location}</span>
+                            <span>{replaceTag(e)}</span>
+                        </div>
+                        <div className="date-tour">
+                            {e.location === "Private Event" ? (
+                                <span>{date}</span>
+                            ) : (
+                                <>
+                                    <span>{date}</span>
+                                    <span>
+                                        {time}
+                                        {timeTo ? <>-{timeTo}</> : null}
+                                    </span>
+                                </>
+                            )}
+                        </div>
                     </div>
-                </div>
-            );
-        });
+                );
+            });
 
     return (
         <section className="b-tour" id="tour">
-            <Fade cascade duration={500}>
+            <Fade cascade duration={300}>
                 <div className="b-tour__wrapper">
                     <h2>Summer Tour 2019</h2>
                     <div className="b-tour__container">

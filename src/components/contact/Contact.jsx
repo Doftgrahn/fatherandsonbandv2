@@ -7,7 +7,7 @@ const Contact = () => {
     const renderContacts = contacts.map((info, i) => (
         <Fragment key={i}>
             <span>{info.title}</span>
-            <a href={info.data} target={info.target} rel={info.rel}>
+            <a href={info.data} target={info.target} rel={info.rel} title={`Link to ${info.data}`}>
                 {info.info}
             </a>
         </Fragment>
@@ -15,7 +15,7 @@ const Contact = () => {
 
     return (
         <section className="b-contact" id="contact">
-            <Fade cascade duration={500}>
+            <Fade cascade duration={300}>
                 <div className="b-contact__wrapper">
                     <h2>Contact</h2>
                     <div className="b-contact__container">

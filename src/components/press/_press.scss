@@ -1,12 +1,12 @@
 .b-press {
-    border-top: 30px solid $color-red;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    min-height: 100vh;
     //justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
     padding: $spacing-regular 5px;
+    border-top: 30px solid $color-red;
     //background-color: $color-light;
     //background: linear-gradient(45deg, #ffe8cc 0%,#ffce93 100%);
     background-image: url("./assets/images/texture.jpg");
@@ -18,7 +18,6 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        //justify-content: center;
         width: 100%;
         max-width: 940px;
         margin: 0 auto;
@@ -30,45 +29,65 @@
     }
 
     &__container {
-        color: $color-gray;
         display: flex;
         flex-direction: column;
         //align-items: center;
         justify-content: center;
         width: 100%;
         padding: 10px;
+        color: $color-gray;
         @media screen and (min-width: 800px) {
-            padding: 0 1em;
             flex-direction: row;
+            padding: 0 1em;
         }
 
         &-info {
             position: relative;
-            background: $color-white;
             display: flex;
             flex-direction: column;
             width: 100%;
             min-width: 320px;
             max-width: 100%;
+            margin: 10px 0 40px;
             padding: 15px 20px;
-            margin: 20px 10px;
+            background: $color-white;
             box-shadow: 2px 2px 4px #3e3e3e99;
             @media screen and (min-width: 800px) {
                 margin: 20px;
             }
 
+            .picture_container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                box-shadow: 2px 2px 4px #3e3e3e99;
+
+                img {
+                    padding: 10px;
+                    //width: 100%;
+                    object-fit: cover;
+                    //height: 100%;
+                    //position: absolute;
+                }
+            }
+
             h3 {
-                color: #a15c43;
-                margin: 0;
+                font-size: 24px;
                 position: absolute;
                 top: -30px;
-                left: -20px;
-                box-shadow: 2px 2px 4px #3e3e3e99;
-                padding: 5px 10px;
-                font-size: 24px;
-                letter-spacing: 1px;
+                left: -14px;
                 display: inline-block;
+                margin: 0;
+                padding: 5px 10px;
+                letter-spacing: 1px;
+                color: #a15c43;
                 background: $color-gray;
+                box-shadow: 2px 2px 4px #3e3e3e99;
+            }
+
+            h4 {
+                padding: 10px 0;
+                color: $color-dark;
             }
 
             .language {
@@ -77,10 +96,10 @@
                 border-bottom: 5px solid $color-red-light;
 
                 h4 {
-                    color: $color-red;
-                    cursor: pointer;
                     padding: 10px;
+                    cursor: pointer;
                     transition: 0.5s;
+                    color: $color-red;
 
                     &:hover {
                         color: $color-dark;
@@ -93,22 +112,14 @@
             }
 
             p {
-                text-align: justify;
-                color: $color-dark;
                 font-weight: 500;
                 margin-top: 0;
                 padding: 10px;
                 animation: fadein 0.4s ease-in;
+                //text-align: justify;
+                color: $color-dark;
             }
-            @keyframes fadein {
-                from {
-                    opacity: 0;
-                }
-
-                to {
-                    opacity: 1;
-                }
-            }
+            
         }
     }
 }

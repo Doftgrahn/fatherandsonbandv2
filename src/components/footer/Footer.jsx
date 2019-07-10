@@ -11,7 +11,7 @@ const Footer = () => {
 
     return (
         <footer className="b-footer" id="contact">
-            <Fade cascade duration={500}>
+            <Fade cascade duration={300}>
                 <div className="b-footer__wrapper">
                     <div className="b-footer__container">
                         <div className="b-footer__info">
@@ -27,7 +27,8 @@ const Footer = () => {
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="https://w ww.facebook.com/fatherandsonbandproject/"
+                                href="https://www.facebook.com/fatherandsonbandproject/"
+                                title="Facebook"
                             >
                                 <Facebook />
                             </a>
@@ -35,19 +36,20 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 href="https://www.instagram.com/fatherandson_band/"
+                                title="Instagram"
                             >
                                 <Instagram />
                             </a>
                         </div>
                     </div>
                     <div className="b-footer__content-references">
-                        <Link to="/references#references">
-                            Folks who helpes us along the way
+                        <Link to="/references#references" title="References">
+                            Folks who helped us along the way!
                         </Link>
                     </div>
                     <div className="b-footer__content-creator">
                         <p>Website produced by Simon Grahn</p>
-                        <a href="mailto:Simon.grahn@gmail.com">Contact me</a>
+                        <a href="mailto:Simon.grahn@gmail.com" title="Link to Creator of WebPage">Contact me</a>
                     </div>
                 </div>
             </Fade>

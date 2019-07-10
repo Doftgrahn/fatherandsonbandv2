@@ -20,7 +20,7 @@ const contacts = [
         info: "+358-417447657"
     },
     {
-        title: "Go to Shop",
+        info: "Go to Shop",
         data: "https://www.skiingaroundtheworldbook.com/shop/",
         target: "_blank",
         rel: "noopener noreferrer"

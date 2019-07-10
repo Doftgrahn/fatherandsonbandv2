@@ -1,3 +1,18 @@
+.b {
+    //position: relative;
+    width: 100%;
+    //height:100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: none;
+    background-image: url("./assets/images/hero.jpg");
+    overflow: hidden;
+    @media screen and (min-width: 800px) {
+        background-attachment: fixed;
+    }
+}
+
 .b-hero {
     //z-index: 0;
     width: 100%;

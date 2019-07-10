@@ -5,14 +5,10 @@ import image1 from "../../assets/images/bandet1.jpg";
 import image2 from "../../assets/images/bandet.jpg";
 
 const AboutBand = () => {
-    //const [showMore, setShowMore] = useState(false);
-
-    //const showText = () => setShowMore(!showMore);
-
     return (
         <section className="b-info" id="about">
             <div className="b-info__wrapper">
-                <Fade cascade duration={500}> 
+                <Fade cascade duration={300}>
                     <div className="b-info__container">
                         <h2>About the band</h2>
                         <p>
@@ -34,7 +30,7 @@ const AboutBand = () => {
                             and 1970s.
                         </p>
 
-                        <p>
+                        {/*<p>
                             Often, they perform a History of Rock ‘n’ Roll show,
                             which is divided into two halves with an
                             intermission. The first set sees the band enter the
@@ -49,7 +45,7 @@ const AboutBand = () => {
                             Rolling Stones, Dr. Hook, John Denver, Creedence
                             Clearwater Revival, Jimi Hendrix, and many more of
                             the top acts of the ’60s and ’70s.
-                        </p>
+                        </p>*/}
                     </div>
                 </Fade>
                 <Fade cascade>

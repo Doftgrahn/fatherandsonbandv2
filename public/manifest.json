@@ -2,12 +2,20 @@
     "short_name": "Father & Son Band",
     "name": "Father & Son Band",
     "icons": [{
-        "src": "favicon.ico",
-        "sizes": "64x64 32x32 24x24 16x16",
-        "type": "image/x-icon"
+        "src": "./image/fasb.png",
+        "sizes": "512x512",
+        "type": "image/png"
     }],
-    "start_url": ".",
+    "start_url": "/?utm_source=homescreen",
     "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+    "scope": "./",
+    "theme_color": "#AA5939",
+    "background_color": "#333333",
+    "orientation": "natural",
+    "description": "App for Father & Son Band",
+    "categories": ["music"],
+    "serviceworker": {
+        "src": "./service-worker.js"
+    }
+
 }
