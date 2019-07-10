@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import {NavHashLink as NavLink} from "react-router-hash-link";
 
+//{name: "newShop", ref: "/shop#shop"}
+
 const Navbar = ({toggle, toggleOff}) => {
     const [refs] = useState([
         {name: "Home", ref: "/home#hero"},
@@ -10,8 +12,7 @@ const Navbar = ({toggle, toggleOff}) => {
         {name: "Gallery", ref: "/home#gallery"},
         {name: "Tour", ref: "/home#tour"},
         {name: "Contact", ref: "/contact#contact"},
-        {name: "Press", ref: "/press#press"},
-        {name: "newShop", ref: "/shop#shop"}
+        {name: "Press", ref: "/press#press"}
     ]);
 
     const navBar = refs.map((link, i) => (
