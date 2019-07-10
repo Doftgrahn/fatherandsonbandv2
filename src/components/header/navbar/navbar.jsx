@@ -10,7 +10,8 @@ const Navbar = ({toggle, toggleOff}) => {
         {name: "Gallery", ref: "/home#gallery"},
         {name: "Tour", ref: "/home#tour"},
         {name: "Contact", ref: "/contact#contact"},
-        {name: "Press", ref: "/press#press"}
+        {name: "Press", ref: "/press#press"},
+        {name: "newShop", ref: "/shop#shop"}
     ]);
 
     const navBar = refs.map((link, i) => (

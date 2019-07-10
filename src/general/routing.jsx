@@ -6,6 +6,7 @@ import Main from "../components/Main";
 import Press from "../components/press/Press";
 import Contact from "../components/contact/Contact";
 import References from "../components/references/References";
+import Shop from "../components/shop/Shop";
 
 const Routing = () => {
     const routing = [
@@ -13,6 +14,7 @@ const Routing = () => {
         {path: "/press", exact: false, component: Press},
         {path: "/contact", exact: false, component: Contact},
         {path: "/references", exact: false, component: References},
+        {path: "/shop", exact: false, component: Shop},
         {path: "**", exact: true, component: Main}
     ];
 

@@ -19,11 +19,11 @@ const Header = () => {
     }, []);
 
     useEffect(() => {
-        let didCancel = true;
-        if (didCancel) {
+        let isSubscribed = true;
+        if (isSubscribed) {
             setMount(true);
         }
-        return () => (didCancel = true);
+        return () => (isSubscribed = true);
     }, []);
 
     const handleScroll = () => {
