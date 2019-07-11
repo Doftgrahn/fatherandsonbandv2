@@ -1,7 +1,7 @@
 import React, {Fragment} from "react";
 import Fade from "react-reveal/Fade";
 
-import {contacts} from "./contactList";
+import {contacts} from "./data/contactList";
 
 const Contact = () => {
     const renderContacts = contacts.map((info, i) => (
