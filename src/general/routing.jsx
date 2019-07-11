@@ -8,7 +8,7 @@ import Contact from "../components/contact/Contact";
 import References from "../components/references/References";
 import Shop from "../components/shop/Shop";
 
-const Routing = () => {
+const Routing = props => {
     const routing = [
         {path: "/", exact: true, component: Main},
         {path: "/press", exact: false, component: Press},
@@ -23,7 +23,7 @@ const Routing = () => {
             key={i}
             path={route.path}
             exact={route.exact}
-            component={route.component}
+            render={() => <route.component {...props} />}
         />
     ));
 

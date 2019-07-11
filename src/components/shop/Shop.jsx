@@ -3,8 +3,8 @@ import React, {useState} from "react";
 import Rambling from "../../assets/shop/ramblingrocking.jpg";
 import ComingOfAge from "../../assets/shop/comingOfAge.jpg";
 
-const Shop = () => {
-    const [cd, setCd] = useState([
+const Shop = ({addToBasket, deleteFromBasket}) => {
+    const [cd] = useState([
         {
             id: 2,
             name: "Coming of Age",
@@ -30,6 +30,8 @@ const Shop = () => {
             <div className="picture_container-details">
                 <h3>€{img.price}</h3>
                 <p>{img.info}</p>
+                <button onClick={() => addToBasket(img)}>Add to basket</button>
+                <button onClick={() => deleteFromBasket(img)}>Delete</button>
             </div>
         </div>
     ));

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {NavHashLink as NavLink} from "react-router-hash-link";
 
-const Navbar = ({toggle, toggleOff}) => {
+const Navbar = ({toggle, toggleOff, store}) => {
     const [refs] = useState([
         {name: "Home", ref: "/home#hero"},
         {name: "About", ref: "home#about"},
@@ -11,7 +11,7 @@ const Navbar = ({toggle, toggleOff}) => {
         {name: "Tour", ref: "/home#tour"},
         {name: "Contact", ref: "/contact#contact"},
         {name: "Press", ref: "/press#press"},
-        {name: "newShop", ref: "/shop#shop"}
+        {name: "Shop", ref: "/shop#shop"}
     ]);
 
     const navBar = refs.map((link, i) => (
@@ -32,7 +32,6 @@ const Navbar = ({toggle, toggleOff}) => {
             </NavLink>
         </li>
     ));
-
     return (
         <div
             className={
@@ -43,16 +42,7 @@ const Navbar = ({toggle, toggleOff}) => {
             <ul className="b-header__container-meny">
                 {navBar}
                 <li className="b-header__container-meny-links">
-                    <a
-                        className="b-header__container-meny-links"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://www.skiingaroundtheworldbook.com/shop/"
-                        title="Link to Shop"
-                        onClick={() => toggleOff()}
-                    >
-                        Shop
-                    </a>
+                    {store.amount ?  null : `Cart ${store.map(e => e.amount).reduce((a, b) => a + b)}`}
                 </li>
             </ul>
         </div>
