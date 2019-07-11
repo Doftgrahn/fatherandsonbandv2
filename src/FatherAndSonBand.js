@@ -30,7 +30,6 @@ const FatherAndSonBand = () => {
         setStore(filterId);
     };
 
-    console.log(store);
     return (
         <div className="App">
             <Router>

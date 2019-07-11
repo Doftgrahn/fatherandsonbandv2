@@ -1,7 +1,10 @@
 import React, {useState} from "react";
+import Fade from "react-reveal/Fade";
 
 import Rambling from "../../assets/shop/ramblingrocking.jpg";
 import ComingOfAge from "../../assets/shop/comingOfAge.jpg";
+
+import {ramblingText, comingOfAgeText} from "./data/text";
 
 const Shop = ({addToBasket, deleteFromBasket}) => {
     const [cd] = useState([
@@ -10,16 +13,14 @@ const Shop = ({addToBasket, deleteFromBasket}) => {
             name: "Coming of Age",
             pic: ComingOfAge,
             price: 15,
-            info:
-                "This music CD is comprised of eleven songs–seven composed by Jimmy Petterson, his son Erik, and the third band member, Elie and four covers of well known hits. This is NOT the same CD as the one that comes with the book. Two of the songs are the same. The other nine cuts on this CD are available exclusively on this CD."
+            info: comingOfAgeText
         },
         {
             id: 1,
             name: "Rocking, Rolling and Rambling",
             pic: Rambling,
             price: 15,
-            info:
-                "Father & Son + 1 eventually grew into a five-man band, and changed their name to the Father & Son Band. This is their newest CD. This is, once again, a combination of their own compositions and a number of cover songs that they feature regularly in their live performances. The songs included on this CD are:"
+            info: ramblingText
         }
     ]);
 
@@ -38,10 +39,12 @@ const Shop = ({addToBasket, deleteFromBasket}) => {
 
     return (
         <section className="b-shop" id="shop">
-            <div className="b-shop__wrapper">
-                <h2>Shop</h2>
-                <div className="b-shop__container-info">{showCd}</div>
-            </div>
+            <Fade cascade duration={300}>
+                <div className="b-shop__wrapper">
+                    <h2>Shop</h2>
+                    <div className="b-shop__container-info">{showCd}</div>
+                </div>
+            </Fade>
         </section>
     );
 };

@@ -8,8 +8,7 @@ import Hamburger from "./hamburger/hamburger";
 
 import {Fade} from "react-reveal";
 
-const Header = (props) => {
-    console.log(props);
+const Header = props => {
     const [mount, setMount] = useState(false);
     const [toggle, setToggle] = useState(false);
     const [className, setClassName] = useState("");
@@ -45,7 +44,11 @@ const Header = (props) => {
                         </Link>
                     </div>
 
-                    <Navbar store={props.store} toggle={toggle} toggleOff={toggleOff} />
+                    <Navbar
+                        store={props.store}
+                        toggle={toggle}
+                        toggleOff={toggleOff}
+                    />
                     <Hamburger toggle={toggle} toggleState={toggleState} />
                 </div>
             </Fade>
