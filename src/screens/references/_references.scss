@@ -74,13 +74,20 @@
 
         &-info {
             padding: 40px 10px 20px;
+            margin-top: 120px;
+            @media screen and (min-width: 800px) {
+                margin: 0;
+            }
 
-            p {
-                font-weight: 500;
-                padding: 10px;
-                animation: fadein 0.4s ease-in;
-                text-align: justify;
-                color: $color-dark;
+            ul {
+                list-style-type: none;
+
+                li {
+                    font-weight: 500;
+                    padding: 10px;
+                    text-align: justify;
+                    color: $color-dark;
+                }
             }
         }
     }

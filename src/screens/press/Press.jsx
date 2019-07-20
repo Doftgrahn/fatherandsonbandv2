@@ -6,11 +6,17 @@ import German from "./German";
 
 import BehindBack from "../../assets/images/press/gBehindBack.jpg";
 import JimwailBoys from "../../assets/images/press/wail.jpg";
+import ForStuff from "../../assets/images/press/4.jpg";
+import ForStuff2 from "../../assets/images/press/5.jpg";
+import Dach from "../../assets/images/press/dach.jpg";
 
 const Press = ({history}, props) => {
     const [pressImg] = useState([
         {name: "jimyBehindBack", img: BehindBack},
-        {name: "jimmyWail", img: JimwailBoys}
+        {name: "jimmyWail", img: JimwailBoys},
+        {name: "forStuff", img: ForStuff},
+        {name: "stuff", img: ForStuff2},
+        {name: "Dach", img: Dach}
     ]);
 
     const [isGerman, setIsGerman] = useState(false);
@@ -52,7 +58,9 @@ const Press = ({history}, props) => {
                                 </h4>
                             </div>
                             <Fade spy={isGerman} duration={200}>
-                                {languageRender}
+                                <div className="language_container">
+                                    {languageRender}
+                                </div>
                             </Fade>
                         </div>
                         <div className="b-press__container-info">

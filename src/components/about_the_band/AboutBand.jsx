@@ -29,7 +29,6 @@ const AboutBand = () => {
                             variety of well-known covers from the 1950s, 1960s,
                             and 1970s.
                         </p>
-
                         {/*<p>
                             Often, they perform a History of Rock ‘n’ Roll show,
                             which is divided into two halves with an

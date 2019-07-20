@@ -2,7 +2,13 @@ import React from "react";
 
 import Fade from "react-reveal/Fade";
 
+import {refData} from './data/refData';
+
 const References = () => {
+
+const referencesData = refData.map((el, i) => <li key={i}>{el}</li>)
+
+
     return (
         <section className="b-references" id="references">
             <Fade cascade duration={300}>
@@ -11,11 +17,14 @@ const References = () => {
                     <div className="b-references__container">
                         <div className="b-references__container-people">
                             <h3>
-                                Here are some people that really helped us along
-                                the way!
+                            Many thanks to various photographers that have been kind enough to join us at concerts, take photographs, and allow us to use them. Thanks go, among others to:
+
                             </h3>
                             <div className="b-references__container-info">
-                                <p>Mr Capo</p>
+                            <ul>
+                            {referencesData}
+                            </ul>
+
                             </div>
                         </div>
                     </div>

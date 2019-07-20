@@ -33,7 +33,7 @@ header {
         left: 100%;
         width: 100%;
         min-height: 100vh;
-        padding: 80px 20px 50px;
+        padding: 54px 20px 50px;
         transition: left 0.4s ease;
         background: $color-red;
         @media screen and (min-width: 800px) {
@@ -49,7 +49,6 @@ header {
         li {
             font-family: inherit;
             font-family: $font-headline;
-            font-size: 40px;
             margin-left: 10px;
             padding: 0;
             cursor: pointer;

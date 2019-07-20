@@ -10,6 +10,7 @@ const Navbar = ({toggle, toggleOff}) => {
         {name: "Members", ref: "/home/#members"},
         {name: "History", ref: "/home#history"},
         {name: "Gallery", ref: "/home#gallery"},
+        {name:"Media", ref: "/home#media"},
         {name: "Tour", ref: "/home#tour"},
         {name: "Contact", ref: "/contact#contact"},
         {name: "Press", ref: "/press#press"}

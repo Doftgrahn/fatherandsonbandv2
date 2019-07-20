@@ -12,6 +12,7 @@
         padding: 60px $spacing-regular;
     }
 
+
     &__wrapper {
         display: flex;
         align-items: center;
@@ -53,6 +54,7 @@
 
             &:first-child {
                 text-indent: 0;
+                font-size: 18px;
             }
         }
 

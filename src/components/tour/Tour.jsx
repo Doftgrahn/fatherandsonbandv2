@@ -6,6 +6,7 @@ import {database} from "../../general/firestoreconfig";
 const Tour = () => {
     const [tour, setTour] = useState([]);
 
+
     useEffect(() => {
         const userCollection = database.collection("tour");
         const unsubscribe = userCollection.onSnapshot(snapshot => {
