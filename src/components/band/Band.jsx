@@ -1,5 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+
+/*Band Info, in dataFolder*/
 import {bandInfo} from "./data/memberText";
 
 const Band = () => {

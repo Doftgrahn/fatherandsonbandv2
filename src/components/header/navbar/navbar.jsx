@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+
+// Using NavHasLink for Scroll to Element
 import {NavHashLink as NavLink} from "react-router-hash-link";
 
 //{name: "newShop", ref: "/shop#shop"}

@@ -4,9 +4,8 @@ const refData = [
     "Sandro Kumrit",
     "Stefan Ivan Lendl",
     "Stephan Mussil",
-    "Antoan Salma"
+    "Antoan Salma",
+    "Jennie Erlandsson"
 ];
 
-
-
-export {refData}
+export {refData};

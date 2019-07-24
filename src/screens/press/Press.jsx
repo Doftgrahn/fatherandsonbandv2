@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import Fade from "react-reveal/Fade";
 
-import English from "./English";
-import German from "./German";
+import English from "./data/English";
+import German from "./data/German";
 
 import BehindBack from "../../assets/images/press/gBehindBack.jpg";
 import JimwailBoys from "../../assets/images/press/wail.jpg";
@@ -10,7 +10,7 @@ import ForStuff from "../../assets/images/press/4.jpg";
 import ForStuff2 from "../../assets/images/press/5.jpg";
 import Dach from "../../assets/images/press/dach.jpg";
 
-const Press = ({history}, props) => {
+const Press = ({history}) => {
     const [pressImg] = useState([
         {name: "jimyBehindBack", img: BehindBack},
         {name: "jimmyWail", img: JimwailBoys},
@@ -21,10 +21,10 @@ const Press = ({history}, props) => {
 
     const [isGerman, setIsGerman] = useState(false);
 
-    const languageRender = isGerman ? <German /> : <English />;
-
     const englishLang = () => setIsGerman(false);
     const germanLang = () => setIsGerman(true);
+
+    const languageRender = isGerman ? <German /> : <English />;
 
     const renderImages = pressImg.map((pic, i) => (
         <div className="picture_container" key={i}>
