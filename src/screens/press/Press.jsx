@@ -4,19 +4,31 @@ import Fade from "react-reveal/Fade";
 import English from "./data/English";
 import German from "./data/German";
 
-import BehindBack from "../../assets/images/press/gBehindBack.jpg";
-import JimwailBoys from "../../assets/images/press/wail.jpg";
-import ForStuff from "../../assets/images/press/4.jpg";
-import ForStuff2 from "../../assets/images/press/5.jpg";
-import Dach from "../../assets/images/press/dach.jpg";
+/*--
+High Resolution
+--*/
+import BehindBack from "../../assets/images/press/highres/gBehindBack.jpg";
+import JimwailBoys from "../../assets/images/press/highres/wail.jpg";
+import ForStuff from "../../assets/images/press/highres/4.jpg";
+import ForStuff2 from "../../assets/images/press/highres/5.jpg";
+import Dach from "../../assets/images/press/highres/dach.jpg";
+
+/*--
+LowRes
+--*/
+import LowBehindBack from "../../assets/images/press/lowres/gBehindBack.jpg";
+import LowJimwailBoys from "../../assets/images/press/lowres/wail.jpg";
+import LowForStuff from "../../assets/images/press/lowres/4.jpg";
+import LowForStuff2 from "../../assets/images/press/lowres/5.jpg";
+import LowDach from "../../assets/images/press/lowres/dach.jpg";
 
 const Press = ({history}) => {
     const [pressImg] = useState([
-        {name: "jimyBehindBack", img: BehindBack},
-        {name: "jimmyWail", img: JimwailBoys},
-        {name: "forStuff", img: ForStuff},
-        {name: "stuff", img: ForStuff2},
-        {name: "Dach", img: Dach}
+        {name: "jimyBehindBack", highImg: BehindBack, lowImg: LowBehindBack},
+        {name: "jimmyWail", highImg: JimwailBoys, lowImg: LowJimwailBoys},
+        {name: "forStuff", highImg: ForStuff, lowImg: LowForStuff},
+        {name: "stuff", highImg: ForStuff2, lowImg: LowForStuff2},
+        {name: "Dach", highImg: Dach, lowImg: LowDach}
     ]);
 
     const [isGerman, setIsGerman] = useState(false);
@@ -28,8 +40,8 @@ const Press = ({history}) => {
 
     const renderImages = pressImg.map((pic, i) => (
         <div className="picture_container" key={i}>
-            <a href={pic.img} download>
-                <img src={pic.img} alt={pic.name} />
+            <a href={pic.highImg} download>
+                <img src={pic.lowImg} alt={pic.name} />
             </a>
         </div>
     ));
