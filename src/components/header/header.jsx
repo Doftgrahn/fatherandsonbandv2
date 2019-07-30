@@ -23,7 +23,7 @@ const Header = props => {
         if (isSubscribed) {
             setMount(true);
         }
-        return () => (isSubscribed = true);
+        return () => (isSubscribed = false);
     }, []);
 
     const handleScroll = () => {

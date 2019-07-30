@@ -49,7 +49,12 @@ const Footer = () => {
                     </div>
                     <div className="b-footer__content-creator">
                         <p>Website produced by Simon Grahn</p>
-                        <a href="mailto:Simon.grahn@gmail.com" title="Link to Creator of WebPage">Contact me</a>
+                        <a
+                            href="mailto:Simon.grahn@gmail.com"
+                            title="Link to Creator of WebPage"
+                        >
+                            Contact me
+                        </a>
                     </div>
                 </div>
             </Fade>

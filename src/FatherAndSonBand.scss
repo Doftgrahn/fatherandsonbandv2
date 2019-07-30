@@ -8,10 +8,13 @@
 @import './components/media/media.scss';
 @import './components/gallery/gallery.scss';
 @import './components/footer/footer.scss';
-@import './components/contact/contact.scss';
-@import './components/press/press.scss';
-@import './components/references/references.scss';
-@import './components/shop/shop.scss';
+
+//contact
+@import './screens/contact/contact.scss';
+
+@import './screens/press/press.scss';
+@import './screens/references/references.scss';
+@import './screens/shop/shop.scss';
 
 .App {
     overflow: hidden;

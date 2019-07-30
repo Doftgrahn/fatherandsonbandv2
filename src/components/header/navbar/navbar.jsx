@@ -1,13 +1,19 @@
 import React, {useState} from "react";
+
+// Using NavHasLink for Scroll to Element
 import {NavHashLink as NavLink} from "react-router-hash-link";
 
 const Navbar = ({toggle, toggleOff, store}) => {
+//{name: "newShop", ref: "/shop#shop"}
+
+
     const [refs] = useState([
         {name: "Home", ref: "/home#hero"},
         {name: "About", ref: "home#about"},
         {name: "Members", ref: "/home/#members"},
         {name: "History", ref: "/home#history"},
         {name: "Gallery", ref: "/home#gallery"},
+        {name:"Media", ref: "/home#media"},
         {name: "Tour", ref: "/home#tour"},
         {name: "Contact", ref: "/contact#contact"},
         {name: "Press", ref: "/press#press"},

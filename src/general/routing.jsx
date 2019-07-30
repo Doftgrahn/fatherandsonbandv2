@@ -2,11 +2,11 @@ import React from "react";
 
 import {Switch, Route} from "react-router-dom";
 
-import Main from "../components/Main";
-import Press from "../components/press/Press";
-import Contact from "../components/contact/Contact";
-import References from "../components/references/References";
-import Shop from "../components/shop/Shop";
+import Main from "../screens/main/Main";
+import Press from "../screens/press/Press";
+import Contact from "../screens/contact/Contact";
+import References from "../screens/references/References";
+import Shop from "../screens/shop/Shop";
 
 const Routing = props => {
     const routing = [

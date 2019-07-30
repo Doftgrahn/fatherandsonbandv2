@@ -1,8 +1,10 @@
 import React, {lazy, Suspense, useState} from "react";
 import {BrowserRouter as Router} from "react-router-dom";
 
+/* Styles */
 import "./FatherAndSonBand.scss";
 
+/*Components*/
 const Header = lazy(() => import("./components/header/header"));
 const Routing = lazy(() => import("./general/routing"));
 const Footer = lazy(() => import("./components/footer/Footer"));
