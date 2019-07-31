@@ -31,8 +31,14 @@ const Shop = ({addToBasket, deleteFromBasket}) => {
             <div className="picture_container-details">
                 <h3>€{img.price}</h3>
                 <p>{img.info}</p>
-                <button onClick={() => addToBasket(img)}>Add to basket</button>
-                <button onClick={() => deleteFromBasket(img)}>Delete</button>
+                <div className="button-container">
+                    <button onClick={() => addToBasket(img)}>
+                        Add to basket
+                    </button>
+                    <button onClick={() => deleteFromBasket(img)}>
+                        Delete
+                    </button>
+                </div>
             </div>
         </div>
     ));
