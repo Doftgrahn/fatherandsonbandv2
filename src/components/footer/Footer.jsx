@@ -8,6 +8,7 @@ import {ReactComponent as Instagram} from "../../assets/instagram.svg";
 
 const Footer = () => {
     const getYear = new Date().getFullYear();
+    const routerReference = "/references#references";
 
     return (
         <footer className="b-footer" id="contact">
@@ -43,7 +44,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="b-footer__content-references">
-                        <Link to="/references#references" title="References">
+                        <Link to={routerReference} title="References">
                             Folks who helped us along the way!
                         </Link>
                     </div>
