@@ -8,7 +8,7 @@ const bandInfo = [
     {
         picture: ErikImg,
         name: "Erik Petterson Sjöqvist",
-        instrument: "Vocals, Lead guitar, Keyboard, Banjo & Harmonica",
+        instrument: "Vocals, Lead Guitar & Keyboard",
         info:
             "Piano lessons from age 4, guitar instruction from age 10, 7 years of music classes at middle and high school, a year of musical-theater studies, voice courses at the Complete Vocal Institute in Copenhagen, and an intense course in music production. Erik has devoted his life to music. "
     },
@@ -23,7 +23,7 @@ const bandInfo = [
     {
         picture: SimonImg,
         name: "Simon Grahn",
-        instrument: "Saxophone, Flute, Clarinet, Harmonica & Song",
+        instrument: "Saxophone, Flute, Clarinet, Harmonica & Vocals",
         info:
             "Simon is an multi-instrumentalist who gives endless soul and dynamic energy to everything he does. His smile and his music is contagious."
     },
@@ -37,7 +37,7 @@ const bandInfo = [
     {
         picture: MickelImg,
         name: "Mickel Löfvenius",
-        instrument: "Drums & Cajón",
+        instrument: "Drums & Vocals",
         info:
             "Drummer, skier, sailor, carpenter, and lover, Mickel Löfvenius holds many skill sets. He grew up in the deep forest of northern Sweden. Rumor has it that he was raised by wild animals."
     }

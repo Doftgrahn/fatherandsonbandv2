@@ -1,16 +1,16 @@
 import React from "react";
 
-const Media = () => {
-    const media = [
-        {
-            title: "promo-video",
-            source: "https://www.youtube.com/embed/KETf1X72t_o"
-        }
-    ];
+import {media} from "./data/mediaData";
 
+const Media = () => {
     const renderFilm = media.map((video, i) => (
         <div className="iframe-container" key={i}>
-            <iframe title={video.title} src={video.source} />
+            <iframe
+                title={video.title}
+                src={video.source}
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            />
         </div>
     ));
 
