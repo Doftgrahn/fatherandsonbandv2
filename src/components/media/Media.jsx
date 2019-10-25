@@ -9,7 +9,7 @@ const Media = () => {
                 title={video.title}
                 src={video.source}
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
             />
         </div>
     ));
