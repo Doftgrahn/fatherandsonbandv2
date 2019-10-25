@@ -1,15 +1,15 @@
-import React from "react";
-import Fade from "react-reveal/Fade";
+import React from 'react';
+import Fade from 'react-reveal/Fade';
 
-import image1 from "../../assets/images/bandet1.jpg";
-import image2 from "../../assets/images/bandet.jpg";
+import image1 from '../../assets/images/bandet1.jpg';
+import image2 from '../../assets/images/bandet.jpg';
 
 const AboutBand = () => {
     return (
-        <section className="b-info" id="about">
-            <div className="b-info__wrapper">
+        <section className='b-info' id='about'>
+            <div className='b-info__wrapper'>
                 <Fade cascade duration={300}>
-                    <div className="b-info__container">
+                    <div className='b-info__container'>
                         <h2>About the band</h2>
                         <p>
                             The Father & Son Band really began as a gentle
@@ -48,16 +48,16 @@ const AboutBand = () => {
                     </div>
                 </Fade>
                 <Fade cascade>
-                    <div className="b-info__images">
+                    <div className='b-info__images'>
                         <img
                             src={image1}
-                            alt="Father and son"
-                            className="b-info__img"
+                            alt='Father and son'
+                            className='b-info__img'
                         />
                         <img
                             src={image2}
-                            alt="Father and son"
-                            className="b-info__img"
+                            alt='Father and son'
+                            className='b-info__img'
                         />
                     </div>
                 </Fade>

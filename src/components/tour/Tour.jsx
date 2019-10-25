@@ -21,6 +21,7 @@ const Tour = ({ season }) => {
                 };
                 list.push(tourData);
             });
+
             setTour(list);
             localStorage.setItem('tour', JSON.stringify(list));
         });
