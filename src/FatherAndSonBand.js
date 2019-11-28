@@ -1,18 +1,18 @@
-import React, {lazy, Suspense, useState} from "react";
-import {BrowserRouter as Router} from "react-router-dom";
+import React, { lazy, Suspense, useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 /* Styles */
-import "./FatherAndSonBand.scss";
+import './FatherAndSonBand.scss';
 
 /*Components*/
-const Header = lazy(() => import("./components/header/header"));
-const Routing = lazy(() => import("./general/routing"));
-const Footer = lazy(() => import("./components/footer/Footer"));
+const Header = lazy(() => import('./components/header/header'));
+const Routing = lazy(() => import('./general/routing'));
+const Footer = lazy(() => import('./components/footer/Footer'));
 
 const FatherAndSonBand = () => {
     const [store, setStore] = useState([
-        {id: 1, amount: null},
-        {id: 2, amount: null}
+        { id: 1, amount: null },
+        { id: 2, amount: null }
     ]);
 
     const deleteStore = (store, delItem) => {};
@@ -20,7 +20,7 @@ const FatherAndSonBand = () => {
     const currentStore = store => setStore(store);
 
     return (
-        <div className="App">
+        <div className='App'>
             <Router>
                 <Suspense fallback={<h1>Right with ya, hold on a sec!</h1>}>
                     <Header />
