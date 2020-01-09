@@ -1,5 +1,8 @@
-import React, { lazy, Suspense, useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React, { lazy, Suspense, useEffect } from 'react';
+import { Router } from 'react-router-dom';
+
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
 
 /* Styles */
 import './FatherAndSonBand.scss';
@@ -9,26 +12,25 @@ const Header = lazy(() => import('./components/header/header'));
 const Routing = lazy(() => import('./general/routing'));
 const Footer = lazy(() => import('./components/footer/Footer'));
 
+ReactGA.initialize('UA-153619692-1');
+
+const history = createBrowserHistory();
+history.listen(location => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname + location.search);
+});
+
 const FatherAndSonBand = () => {
-    const [store, setStore] = useState([
-        { id: 1, amount: null },
-        { id: 2, amount: null }
-    ]);
-
-    const deleteStore = (store, delItem) => {};
-
-    const currentStore = store => setStore(store);
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
 
     return (
         <div className='App'>
-            <Router>
+            <Router history={history}>
                 <Suspense fallback={<h1>Right with ya, hold on a sec!</h1>}>
                     <Header />
-                    <Routing
-                        store={store}
-                        deleteStore={deleteStore}
-                        currentStore={currentStore}
-                    />
+                    <Routing />
                     <Footer />
                 </Suspense>
             </Router>
